@@ -43,8 +43,8 @@ Equips instructors with tools to create, manage, and enrich course content, fost
 
 Encapsulates essential course information, including title, description, content, instructor details, and enrolled students.
 
-### Quiz and Assignment Classes
+### CoueseWork Classe
 
-Specialized classes for managing quizzes, assignments, and other course materials, ensuring a dynamic learning experience.
+Specialized classe for managing quizzes, assignments, and other course materials, ensuring a dynamic learning experience.
 
 Let's embark on a journey of knowledge and discovery together! 🚀✨
