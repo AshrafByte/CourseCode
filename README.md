@@ -25,26 +25,10 @@ The Online Course Management System is built on a robust model-view-controller (
 
 ## 📚 Class Structure
 
-The system boasts a well-defined class structure, featuring:
-
-### LMS Class
-
-The central hub for managing accounts and courses within the system.
-
-### Student Class
-
-Empowers students to explore and enroll in courses, providing a seamless learning journey.
-
-### Instructor Class
-
-Equips instructors with tools to create, manage, and enrich course content, fostering an engaging learning environment.
-
-### Course Class
-
-Encapsulates essential course information, including title, description, content, instructor details, and enrolled students.
-
-### CoueseWork Classe
-
-Specialized classe for managing quizzes, assignments, and other course materials, ensuring a dynamic learning experience.
+- **LMS Class:** The central hub for managing accounts and courses within the system.
+- **Student Class:** Empowers students to explore and enroll in courses, providing a seamless learning journey.
+- **Instructor Class:** Equips instructors with tools to create, manage, and enrich course content, fostering an engaging learning environment.
+- **Course Class:** Encapsulates essential course information, including title, description, content, instructor details, and enrolled students.
+- **Quiz and Assignment Classes:** Specialized classes for managing quizzes, assignments, and other course materials, ensuring a dynamic learning experience.
 
 Let's embark on a journey of knowledge and discovery together! 🚀✨
