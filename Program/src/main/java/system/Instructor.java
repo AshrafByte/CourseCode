@@ -11,12 +11,75 @@ public class Instructor extends Account
       super(userName, fullName,password , email ,  credit ,  age);
       this.taughtCourses=taughtCourses;
    }
+
+    public ArrayList<Course> getTaughtCourses() {
+        return taughtCourses;
+    }
+
+    public void setTaughtCourses(ArrayList<Course> taughtCourses) {
+        this.taughtCourses = taughtCourses;
+    }
+   
    
    @Override
    public String getUserName()
    {
       return this.userName;
    }
+   
+   @Override
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+   
+
+   @Override
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
+   @Override
+    public void setCredit(double credit) {
+        this.credit = credit;
+    }
+
+   @Override
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+   @Override
+    public String getFullName() {
+        return fullName;
+    }
+
+   @Override
+    public String getLanguage() {
+        return language;
+    }
+
+   @Override
+    public String getPassword() {
+        return password;
+    }
+
+   @Override
+    public String getEmail() {
+        return email;
+    }
+
+   @Override
+    public double getCredit() {
+        return credit;
+    }
+
+   @Override
+    public int getAge() {
+        return age;
+    }
+   
    
    
    
@@ -59,7 +122,6 @@ public class Instructor extends Account
         else if(credit<this.credit)
             System.out.println("there is not enough credit");
         else 
-            
         this.credit-=credit;
     }
    
