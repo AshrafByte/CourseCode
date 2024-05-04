@@ -2,8 +2,17 @@ package system;
 
 public abstract class Account
 {
-
-   public String userName;
+   
+    String userName;
+    String fullName;
+    String language;
+    String password;
+    String email;
+    double credit;
+    int age;
+    
+   
+   
 
    public Account(String userName)
    {
