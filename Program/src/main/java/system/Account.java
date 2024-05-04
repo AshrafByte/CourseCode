@@ -14,10 +14,19 @@ public abstract class Account
    
    
 
-   public Account(String userName)
+   public Account(String userName,String fullName,String password , String email , double credit , int age)
    {
       this.userName = userName;
+      this.fullName = fullName;
+      this.password = password;
+      this.email = email;
+      this.credit = credit;
+      this.age = age;
    }
    
    public abstract String getUserName();
+   public abstract void changeLanguage(String lang);
+   public abstract void changeUserName(String name);
+   public abstract void changeEmail(String email);
+   public abstract void displayInfo();
 }

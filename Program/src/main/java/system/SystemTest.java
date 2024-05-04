@@ -14,10 +14,10 @@ public class SystemTest
       
       Account[] newAccounts =
       {
-         new Student("user1"),
-         new Instructor("user2"),
-         new Instructor("user3"),
-         new Student("user4")
+         new Student("user1","user1a","43656","user1@gmail.com",2500,21),
+         //new Instructor("user2"),
+        // new Instructor("user3"),
+         //new Student("user4")
       };
       
       // test adding accounts to the system.

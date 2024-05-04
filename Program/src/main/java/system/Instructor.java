@@ -3,9 +3,9 @@ package system;
 public class Instructor extends Account
 {
 
-   public Instructor(String userName)
+   public Instructor(String userName,String fullName,String password , String email , double credit , int age)
    {
-      super(userName);
+      super(userName, fullName,password , email ,  credit ,  age);
    }
    
    @Override
@@ -13,6 +13,18 @@ public class Instructor extends Account
    {
       return this.userName;
    }
+   @Override
+   public  void changeLanguage(String lang){}
+   
+   @Override
+   public  void changeUserName(String name){}
+   
+   @Override
+    public  void changeEmail(String email){}
+    
+   @Override
+   public  void displayInfo(){}
+   
    
    // this method should create course then add the course to the system.
    // use course class constrcutor
