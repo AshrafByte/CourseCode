@@ -1,0 +1,6 @@
+GUI\LoginController.class
+GUI\HomeController.class
+module-info.class
+GUI\App.class
+GUI\SettingController.class
+GUI\DashboardController.class
