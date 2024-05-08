@@ -10,6 +10,7 @@ controller\SettingController.class
 controller\LoginController.class
 module-info.class
 system\Instructor.class
+controller\CreateAccountController.class
 system\Assignment.class
 system\Course.class
 system\CourseWork.class
