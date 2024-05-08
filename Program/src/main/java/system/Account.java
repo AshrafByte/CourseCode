@@ -2,19 +2,15 @@ package system;
 
 public abstract class Account
 {
-   
-    String userName;
-    String fullName;
-    String language;
-    String password;
-    String email;
-    double credit;
-    int age;
-    
-   
-   
 
-   public Account(String userName,String fullName,String password , String email , double credit , int age)
+   protected String userName;
+   private String password;
+   private String fullName;
+   private String email;
+   double credit;
+   int age;
+
+   public Account(String userName, String fullName, String password, String email, double credit, int age)
    {
       this.userName = userName;
       this.fullName = fullName;
@@ -23,36 +19,28 @@ public abstract class Account
       this.credit = credit;
       this.age = age;
    }
+
+   public String getUserName()
+   {
+      return this.userName;
+   }
+
+   public String getPassword()
+   {
+      return this.password;
+   }
    
-   public abstract String getUserName();
-   public abstract void changeLanguage(String lang);
-   public abstract void changeUserName(String name);
-   public abstract void changeEmail(String email);
-   public abstract void displayInfo();
+   public void setUserName(String userName)
+   {
+      this.userName = userName ;
+      
+   }
 
-    
-
-    public abstract void setFullName(String fullName) ;
-
+   public void setEmail(String email)
+   {
+      this.email = email;
+   }
    
-
-    public abstract void setPassword(String password);
-
-  
-
-    public abstract void setCredit(double credit);
-
-    public abstract void setAge(int age);
-
-    public abstract String getFullName() ;
-
-    public abstract String getLanguage() ;
-
-    public abstract String getPassword() ;
-
-    public abstract String getEmail() ;
-
-    public abstract double getCredit() ;
-    public abstract int getAge();
+   abstract public void displayInfo();
    
 }
