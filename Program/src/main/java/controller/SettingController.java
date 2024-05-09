@@ -77,7 +77,7 @@ public class SettingController implements Initializable
    public void saveChangesAction()
    {  
       if (!name.getText().equals(""))
-         App.account.setUserName(name.getText());
+         App.account.setFullName(name.getText());
       if (!email.getText().equals(""))
          App.account.setEmail(email.getText());
       if (!password.getText().equals(""))

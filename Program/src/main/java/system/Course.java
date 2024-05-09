@@ -6,13 +6,13 @@ import java.util.ArrayList;
 
 public class Course
 {
-   private final String          title;
-   private final String          description;
-   private final String[]        content;
-   private final String          catagory;
-   private final String          difficulty;
-   private final LocalDate       publishedDate;
-   private final Instructor      instructor;
+   private String          title;
+   private String          description;
+   private String[]        content;
+   private String          catagory;
+   private String          difficulty;
+   private LocalDate       publishedDate;
+   private Instructor      instructor;
    private ArrayList<Student>    enrolledStudents;
    private double                price;
    private double                avgRating;

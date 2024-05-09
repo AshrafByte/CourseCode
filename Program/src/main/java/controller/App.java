@@ -5,9 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import java.io.IOException;
+import javafx.animation.FadeTransition;
 import static javafx.application.Application.launch;
+import javafx.scene.Node;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.util.Duration;
 
 import system.Account;
 import system.LMS;
@@ -34,7 +37,7 @@ public class App extends Application
    }
 
    static void setRoot(String fxml) throws IOException
-   {
+   { 
       page = new Scene(loadFXML(fxml));
       window.setScene(page);
       window.centerOnScreen();
@@ -47,6 +50,14 @@ public class App extends Application
       return fxmlLoader.load();
    }
 
+   static void playErrorAnimation(Node n)
+   {
+      FadeTransition ft1 = new FadeTransition(Duration.seconds(5), n);
+      n.setVisible(true);
+      ft1.setFromValue(1.0);
+      ft1.setToValue(0);
+      ft1.play();
+   }
    public static void main(String[] args)
    {
       SystemTest.TestGUI();

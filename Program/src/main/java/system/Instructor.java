@@ -8,6 +8,11 @@ public class Instructor extends Account
       super(userName, fullName,password , email ,  credit ,  age);
    }
    
+    public Instructor(String userName,String password , String email)
+   {
+      super(userName,password , email);
+   }
+   
     @Override
    public  void displayInfo()
    {

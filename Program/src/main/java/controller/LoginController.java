@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -23,12 +24,13 @@ import system.LMS;
  */
 public class LoginController implements Initializable
 {
+
    @FXML
-   TextField userName ;
+   TextField userName;
    @FXML
-   PasswordField password ;
+   PasswordField password;
    @FXML
-   Label error ;
+   Label error;
    /**
     * Initializes the controller class.
     */
@@ -41,23 +43,21 @@ public class LoginController implements Initializable
    @FXML
    private void goToHome() throws IOException
    {
-         if (LMS.isValidAccount(userName.getText(), password.getText()))
-         {
-            App.account = LMS.findAccount(userName.getText());
-            App.setRoot("home");
-            App.account.displayInfo();
-         }
-         else
-            playErrorAnimation();
-            
+      if (LMS.isValidAccount(userName.getText(), password.getText()))
+      {
+         App.account = LMS.findAccount(userName.getText());
+         App.setRoot("home");
+         App.account.displayInfo();
+      }
+      else
+         App.playErrorAnimation(error);
+
    }
    
-   private void playErrorAnimation()
+   @FXML
+   private void goToCreateAccount() throws IOException
    {
-      FadeTransition ft1 = new FadeTransition(Duration.seconds(5),error);
-      error.setVisible(true);
-      ft1.setFromValue(1.0);
-      ft1.setToValue(0);
-      ft1.play();   
+      App.setRoot("createAccount");
    }
+   
 }

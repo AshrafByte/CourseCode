@@ -7,7 +7,11 @@ public class Student extends Account
    {
       super(userName, fullName, password ,  email ,  credit ,  age);
    }
-
+   
+   public Student(String userName,String password , String email)
+   {
+      super(userName, password ,  email );
+   }
     
    @Override
    public  void displayInfo()
