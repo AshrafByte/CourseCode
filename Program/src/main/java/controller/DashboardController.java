@@ -39,7 +39,11 @@ public class DashboardController implements Initializable
    {
       App.setRoot("mylearning");
    }
-   
+   @FXML
+   public void goToMyQuiz() throws IOException
+   {
+      App.setRoot("hello-view");
+   }
    @FXML
    public void goToLogin() throws IOException
    {

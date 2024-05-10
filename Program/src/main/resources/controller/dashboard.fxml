@@ -9,6 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -47,9 +48,78 @@
                   <Font name="Arial Bold" size="25.0" />
                </font>
                <VBox.margin>
-                  <Insets left="15.0" top="15.0" />
+                  <Insets bottom="5.0" left="15.0" top="15.0" />
                </VBox.margin>
             </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="292.0" fitWidth="488.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/Group%201000004429.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="264.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/Group%201000004430.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="6.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="194.0" style="-fx-background-color: #262836; -fx-background-radius: 12;">
+                           <VBox.margin>
+                              <Insets left="6.0" top="5.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label layoutX="8.0" layoutY="6.0" prefHeight="14.0" prefWidth="56.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="Next Quiz:" textAlignment="CENTER" textFill="#aab1b7">
+                                 <font>
+                                    <Font name="Arial Bold" size="10.0" />
+                                 </font>
+                              </Label>
+                              <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" graphicTextGap="5.0" layoutX="29.0" layoutY="46.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToMyQuiz" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #2780FF; -fx-background-radius: 6; -fx-font-weight: 700;" text="Take Quiz" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="8.0" layoutY="18.0" prefHeight="26.0" prefWidth="111.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="Data Structures" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="213.0" fitWidth="354.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/Group%201000004414.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="100.0" right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="212.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/Group%201000004419.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
          </children>
       </VBox>
    </center>

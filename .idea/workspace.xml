@@ -5,23 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47c0ea0b-e2b3-408c-b469-78d3726d1663" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/controller/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/controller/CreateAccountController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/controller/DashboardController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/controller/HomeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/controller/SettingController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/system/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/system/Assignment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/system/Certificate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/system/Course.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/system/CourseWork.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/system/Instructor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/system/LMS.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/system/Quiz.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/system/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/target/classes/system/SystemTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/src/main/java/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Program/src/main/java/controller/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/src/main/resources/controller/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Program/src/main/resources/controller/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/src/main/resources/controller/mylearning.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Program/src/main/resources/controller/mylearning.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/target/classes/controller/DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Program/target/classes/controller/DashboardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/target/classes/controller/card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Program/target/classes/controller/card.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/target/classes/controller/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Program/target/classes/controller/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/target/classes/controller/mylearning.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Program/target/classes/controller/mylearning.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +106,8 @@
       <workItem from="1715297336546" duration="38000" />
       <workItem from="1715297382101" duration="39000" />
       <workItem from="1715297475359" duration="3000" />
+      <workItem from="1715352004454" duration="76000" />
+      <workItem from="1715352106057" duration="7000" />
     </task>
     <servers />
   </component>

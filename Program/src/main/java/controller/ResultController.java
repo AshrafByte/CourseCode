@@ -49,7 +49,7 @@ public class ResultController implements Initializable
    @FXML
    private void endQuiz() throws IOException
    {
-      App.setRoot("home");
+      App.setRoot("dashboard");
    }
    
 }
