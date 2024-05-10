@@ -9,7 +9,6 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -29,7 +28,7 @@
          <children>
             <HBox alignment="CENTER" prefHeight="44.0" prefWidth="236.0">
                <children>
-                  <FontAwesomeIcon fill="#2780ff" glyphName="LAPTOP" size="2.3em" />
+                  <FontAwesomeIcon fill="#2780ff" glyphName="CODE" size="2.3em" />
                   <Label prefHeight="23.0" prefWidth="131.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="CourseCode" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="22.0" />
@@ -55,7 +54,7 @@
                   <Insets left="25.0" />
                </padding>
             </HBox>
-            <Button alignment="CENTER" defaultButton="true" graphicTextGap="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToDashboard" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: #242635; -fx-background-radius: 12; -fx-font-size: 16; -fx-font-family: Poppins-Light; -fx-font-weight: 600; -fx-font-style: red;" text="Dashboard" textFill="#aeaeb1">
+            <Button alignment="CENTER" defaultButton="true" graphicTextGap="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToDashboard" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: #242635; -fx-background-radius: 12; -fx-font-size: 16; -fx-font-weight: 700;" text="Dashboard" textFill="#aeaeb1">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -123,16 +122,19 @@
                   <Insets left="-60.0" />
                </padding>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#goToLogin" prefHeight="39.0" prefWidth="159.0" style="-fx-background-color: #fc475f; -fx-background-radius: 12;" text="Log out" textFill="#d9dce4">
-               <font>
-                  <Font name="Arial" size="18.0" />
-               </font>
+            <Button alignment="CENTER" defaultButton="true" graphicTextGap="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToSetting" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: #242635; -fx-background-radius: 12; -fx-font-family: Poppins-Medium;" text="Logout" textFill="#aeaeb1">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
-               <effect>
-                  <Glow />
-               </effect>
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="-60.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIcon fill="#aeaeb1" glyphName="SIGN_OUT" onMouseClicked="#goToLogin" />
+               </graphic>
             </Button>
          </children>
       </VBox>
@@ -158,20 +160,29 @@
                      <padding>
                         <Insets left="10.0" />
                      </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
                   </HBox>
                </children>
                <padding>
                   <Insets left="20.0" />
                </padding>
-            </HBox>
-            <Label prefHeight="58.0" prefWidth="154.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="My Learning" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Arial Bold" size="25.0" />
-               </font>
                <VBox.margin>
-                  <Insets left="20.0" top="10.0" />
+                  <Insets bottom="10.0" />
                </VBox.margin>
-               <graphic>
+            </HBox>
+            <VBox prefHeight="100.0" prefWidth="1674.0">
+               <children>
+                  <Label prefHeight="58.0" prefWidth="154.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="My Learning" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Region minWidth="-Infinity" prefHeight="14.0" prefWidth="1674.0" />
                   <HBox prefHeight="45.0" prefWidth="714.0">
                      <children>
                         <Label alignment="CENTER" prefHeight="100.0" prefWidth="26.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="All" textAlignment="CENTER" textFill="WHITE">
@@ -197,9 +208,9 @@
                         </Label>
                      </children>
                   </HBox>
-               </graphic>
-            </Label>
-            <ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="926.0" prefWidth="1446.0" style="-fx-background-color: transparent;-fx-fill: transparent;">
+               </children>
+            </VBox>
+            <ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="891.0" prefWidth="1446.0" style="-fx-background-color: transparent;-fx-fill: transparent;">
                <content>
                   <TilePane hgap="20.0" prefHeight="1742.0" prefWidth="1285.0" style="-fx-background-color: #1F1E2C;" vgap="30.0">
                      <padding>

@@ -48,19 +48,19 @@ public class CreateAccountController implements Initializable
  
    private boolean isValidFields()
    {
-      if (password.getText().equals("") || username.getText().equals("") || email.getText().equals("") || confirmPassword.getText().equals(""))
+      if (username.getText().equals("") || email.getText().equals("") || password.getText().equals("")  || confirmPassword.getText().equals(""))
       {
          errorL.setText("Please provide all data fields");
          return false;
       }
       if (LMS.findAccount(username.getText()) != null)
       {
-         errorL.setText("This username already existed");
+         errorL.setText("Username already exists");
          return false;
       }
       if (!(password.getText().equals(confirmPassword.getText())))
       {
-         errorL.setText("Password doesn't match");
+         errorL.setText("Passwords don't match");
          return false;
       }
       return true;
@@ -75,7 +75,7 @@ public class CreateAccountController implements Initializable
          else
             App.account = new Student(username.getText(), password.getText(), email.getText());
          LMS.createAccount(App.account);
-         App.setRoot("home");
+         App.setRoot("dashboard");
       }
       else
          App.playErrorAnimation(errorL);
