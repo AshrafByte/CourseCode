@@ -9,15 +9,15 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
  *
  * @author A.Ashraf
  */
-public class HomeController implements Initializable
-{    
+public class MyLearningController implements Initializable
+{
+
    /**
     * Initializes the controller class.
     */
@@ -34,17 +34,14 @@ public class HomeController implements Initializable
    }
    
    @FXML
+   public void goToLogin() throws IOException
+   {
+      App.setRoot("login");
+   }
+   
+   @FXML
    public void goToDashboard() throws IOException
    {
       App.setRoot("dashboard");
    }
-   
-   @FXML
-   public void goToLogin() throws IOException
-   {
-      App.account = null;
-      App.setRoot("login");
-      System.out.println("You logged out");
-   }
-   
 }
