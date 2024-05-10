@@ -51,7 +51,6 @@ public class LoginController implements Initializable
       }
       else
          App.playErrorAnimation(error);
-
    }
    
    @FXML

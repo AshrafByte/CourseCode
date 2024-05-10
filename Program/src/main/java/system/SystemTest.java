@@ -9,7 +9,7 @@ public class SystemTest
       {
          new Student("user1","user1a","43656","user1@gmail.com",2500,21),
          //new Instructor("user2"),
-        // new Instructor("user3"),
+         // new Instructor("user3"),
          //new Student("user4")
       };
       
@@ -21,7 +21,7 @@ public class SystemTest
       LMS.displayAllStudents();
       LMS.displayAllInstructors();
       
-      // test deleing account from the LMS.
+      // test deleting account from the LMS.
       LMS.deleteAccount(newAccounts[0]);
       LMS.displayAllStudents();
    }
@@ -32,7 +32,7 @@ public class SystemTest
          new Student("user1", "user1 fullname","1111", "user1@gmail.com", 2500,21),
          new Student("user2", "user2 fullname","2222", "user2@gmail.com", 2500, 21),
          new Student("user3", "user3 fullname","3333", "user3@gmail.com", 2500, 21),
-         new Student("user4", "user4 fullname","4444", "user4@gmail.com", 2500, 21)      
+         new Student("user4", "user4 fullname","4444", "user4@gmail.com", 2500, 21),
       };
       for (var newAccount : newAccounts)
          LMS.createAccount(newAccount);

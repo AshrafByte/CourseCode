@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
@@ -22,17 +23,18 @@ import javafx.util.Duration;
  */
 public class SettingController implements Initializable
 {
+   Stage window = new Stage();
 
    @FXML
-   TextField name ;
+   TextField name;
    @FXML
-   TextField password ;
+   TextField password;
    @FXML
-   TextField age ; 
+   TextField age;
    @FXML
-   TextField email ;
+   TextField email;
    @FXML
-   Label savedMesg ;
+   Label savedMesg;
 
    /**
     * Initializes the controller class.
@@ -60,9 +62,9 @@ public class SettingController implements Initializable
    }
 
    @FXML
-   public void goToHome() throws IOException
+   public void goToMyLearning() throws IOException
    {
-      App.setRoot("home");
+      App.setRoot("mylearning");
    }
    
    private void playSavedAnimation()
@@ -75,7 +77,7 @@ public class SettingController implements Initializable
    }
    @FXML
    public void saveChangesAction()
-   {  
+   {
       if (!name.getText().equals(""))
          App.account.setFullName(name.getText());
       if (!email.getText().equals(""))

@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -16,7 +17,8 @@ import javafx.fxml.Initializable;
  * @author A.Ashraf
  */
 public class DashboardController implements Initializable
-{    
+{
+
    /**
     * Initializes the controller class.
     */

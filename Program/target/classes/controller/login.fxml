@@ -26,10 +26,13 @@
          <children>
             <AnchorPane layoutX="85.0" prefHeight="400.0" prefWidth="221.0">
                <children>
-                  <TextField fx:id="userName" layoutX="-51.0" layoutY="159.0" prefHeight="26.0" prefWidth="192.0" promptText="Enter your username" style="-fx-background-color: #3d4259; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #ffffff;" AnchorPane.bottomAnchor="214.4" AnchorPane.leftAnchor="-51.0" AnchorPane.rightAnchor="80.80000000000001" AnchorPane.topAnchor="159.0" />
+                  <TextField fx:id="userName" layoutX="-51.0" layoutY="159.0" prefHeight="26.0" prefWidth="192.0" promptText="Enter your username" style="-fx-background-color: #3d4259; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #ffffff;" AnchorPane.bottomAnchor="214.4" AnchorPane.leftAnchor="-51.0" AnchorPane.rightAnchor="80.80000000000001" AnchorPane.topAnchor="159.0">
+                     <font>
+                        <Font name="Montserrat-Arabic Light" size="12.0" />
+                     </font></TextField>
                   <Button layoutX="-51.0" layoutY="280.0" mnemonicParsing="false" onAction="#goToDashboard" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: #027bfa; -fx-background-radius: 5;" text="Login" textFill="WHITE">
                      <font>
-                        <Font size="15.0" />
+                        <Font name="Montserrat-Arabic SemiBold" size="15.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -38,28 +41,37 @@
                   <FontAwesomeIcon fill="#027bfa" glyphName="SIGN_IN" layoutX="18.0" layoutY="111.0" size="40" />
                   <FontAwesomeIcon fill="#027bfa" glyphName="USER" layoutX="-84.0" layoutY="181.0" size="25" />
                   <FontAwesomeIcon fill="#027bfa" glyphName="LOCK" layoutX="-85.0" layoutY="232.0" size="25" />
-                  <PasswordField fx:id="password" layoutX="-52.0" layoutY="210.0" prefHeight="26.0" prefWidth="194.0" promptText="Enter your password" style="-fx-background-color: #3d4259; -fx-text-fill: #ffffff;" AnchorPane.bottomAnchor="163.6" AnchorPane.leftAnchor="-51.0" AnchorPane.rightAnchor="80.80000000000001" AnchorPane.topAnchor="209.6" />
+                  <PasswordField fx:id="password" layoutX="-52.0" layoutY="210.0" prefHeight="26.0" prefWidth="194.0" promptText="Enter your password" style="-fx-background-color: #3d4259; -fx-text-fill: #ffffff;" AnchorPane.bottomAnchor="163.6" AnchorPane.leftAnchor="-51.0" AnchorPane.rightAnchor="80.80000000000001" AnchorPane.topAnchor="209.6">
+                     <font>
+                        <Font name="Montserrat-Arabic Light" size="12.0" />
+                     </font></PasswordField>
                   <Label fx:id="error" layoutX="-83.0" layoutY="250.0" text="Invalid! Please check the username and password" textAlignment="CENTER" textFill="#d91470" visible="false" />
                   <HBox alignment="CENTER" layoutX="-54.0" layoutY="320.0" prefHeight="29.0" prefWidth="200.0">
                      <children>
-                        <Label alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="115.0" text="New to CourseCode? " textFill="WHITE" />
-                        <Hyperlink onAction="#goToCreateAccount" prefHeight="24.0" prefWidth="54.0" text="Sign up" textFill="#0277fa" underline="true">
+                        <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="133.0" text="New to CourseCode? " textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat-Arabic Medium" size="12.0" />
+                           </font></Label>
+                        <Hyperlink layoutX="1.0" onAction="#goToCreateAccount" prefHeight="18.0" prefWidth="54.0" text="Sign up" textFill="#0277fa" underline="true">
                            <HBox.margin>
-                              <Insets left="-4.0" />
+                              <Insets left="-2.0" />
                            </HBox.margin>
+                           <font>
+                              <Font name="Montserrat-Arabic Medium" size="12.0" />
+                           </font>
                         </Hyperlink>
                      </children>
                   </HBox>
                   <Label layoutX="-50.0" layoutY="126.0" prefHeight="42.0" prefWidth="57.0" text="USERNAME" textFill="WHITE">
                      <font>
-                        <Font size="9.0" />
+                        <Font name="Montserrat-Arabic Medium" size="9.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
             <Label layoutX="37.0" layoutY="179.0" prefHeight="42.0" prefWidth="79.0" text="PASSWORD" textFill="WHITE">
                <font>
-                  <Font size="9.0" />
+                  <Font name="Montserrat-Arabic Medium" size="9.0" />
                </font>
             </Label>
          </children>

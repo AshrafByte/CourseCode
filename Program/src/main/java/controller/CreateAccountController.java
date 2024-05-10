@@ -45,7 +45,7 @@ public class CreateAccountController implements Initializable
       // TODO
    }   
    
- 
+ // exception handling
    private boolean isValidFields()
    {
       if (username.getText().equals("") || email.getText().equals("") || password.getText().equals("")  || confirmPassword.getText().equals(""))

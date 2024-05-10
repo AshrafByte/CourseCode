@@ -9,6 +9,7 @@ import java.io.IOException;
 import javafx.animation.FadeTransition;
 import static javafx.application.Application.launch;
 import javafx.scene.Node;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
@@ -27,7 +28,18 @@ public class App extends Application
    private static Scene page;
    private static Stage window;
    static Account account;
-   static Course course ;
+   static Course course;
+
+   static void setRoot(String fxml) throws IOException
+   {
+      page = new Scene(loadFXML(fxml));
+      window.setScene(page);
+      window.centerOnScreen();
+      window.show();
+//    window.initStyle(StageStyle.TRANSPARENT);
+//    page.setFill(Color.TRANSPARENT);
+//    return window;
+   }
 
    @Override
    public void start(Stage stage) throws IOException
@@ -35,14 +47,6 @@ public class App extends Application
       window = stage;
       page = new Scene(loadFXML("login"));
       window.setScene(page);
-      window.show();
-   }
-
-   static void setRoot(String fxml) throws IOException
-   { 
-      page = new Scene(loadFXML(fxml));
-      window.setScene(page);
-      window.centerOnScreen();
       window.show();
    }
 
@@ -65,5 +69,6 @@ public class App extends Application
       SystemTest.TestGUI();
       launch(args);
    }
+
 
 }
