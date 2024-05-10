@@ -14,6 +14,7 @@ import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 import system.Account;
+import system.Course;
 import system.LMS;
 import system.SystemTest;
 
@@ -26,6 +27,7 @@ public class App extends Application
    private static Scene page;
    private static Stage window;
    static Account account;
+   static Course course ;
 
    @Override
    public void start(Stage stage) throws IOException
