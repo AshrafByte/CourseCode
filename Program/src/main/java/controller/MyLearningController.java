@@ -56,7 +56,7 @@ public class MyLearningController implements Initializable
    }
    
    @FXML 
-   void sortCourses()
+   private void sortCourses()
    {
         ObservableList<Node> boxes = coursesPane.getChildren();
         List<Node> boxesList = new ArrayList<>(boxes);
