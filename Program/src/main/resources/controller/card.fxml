@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="229.0" style="-fx-background-color: #2B2C3E; -fx-background-radius: 14; -fx-fill: transparent;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView cache="true" fitHeight="161.0" fitWidth="211.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../img/course1.jpeg" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </ImageView>
+      <Label prefHeight="24.0" prefWidth="174.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="Interectoin design With Figma" textFill="WHITE" wrapText="true">
+         <VBox.margin>
+            <Insets bottom="6.0" left="-30.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="4.0" prefWidth="223.0">
+         <children>
+            <HBox prefHeight="16.0" prefWidth="14.0">
+               <children>
+                  <FontAwesomeIcon fill="#2780ff" glyphName="USER" size="1.1em">
+                     <HBox.margin>
+                        <Insets left="-4.0" right="4.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+               </children>
+            </HBox>
+            <Label prefHeight="18.0" prefWidth="54.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="AndroNG" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Al-HadariBold" size="10.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-4.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <Region prefHeight="59.0" prefWidth="230.0" />
+      <StackPane alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="191.0" style="-fx-background-color: #1F1E2C; -fx-background-radius: 50;">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: #2780FF; -fx-background-radius: 50;" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </StackPane>
+   </children>
+</VBox>

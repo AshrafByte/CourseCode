@@ -30,8 +30,7 @@ public class App extends Application
    public void start(Stage stage) throws IOException
    {
       window = stage;
-      page = new Scene(loadFXML("login"));
-
+      page = new Scene(loadFXML("card"));
       window.setScene(page);
       window.show();
    }

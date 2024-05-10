@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1F1E2C;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MyLearningController">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="683.0" prefWidth="246.0" spacing="30.0" style="-fx-background-color: #242635;" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets top="28.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="236.0">
+               <children>
+                  <FontAwesomeIcon fill="#2780ff" glyphName="LAPTOP" size="2.3em" />
+                  <Label prefHeight="23.0" prefWidth="131.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="CourseCode" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="2.0" prefWidth="246.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="52.0" text="Menu" textFill="#6b6c80">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+            </HBox>
+            <Button alignment="CENTER" defaultButton="true" graphicTextGap="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToDashboard" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: #242635; -fx-background-radius: 12; -fx-font-size: 16; -fx-font-family: Poppins-Light; -fx-font-weight: 600; -fx-font-style: red;" text="Dashboard" textFill="#aeaeb1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="-32.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="-20.0" />
+               </VBox.margin>
+               <graphic>
+                  <FontAwesomeIcon fill="#aeaeb1" glyphName="HOME" />
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" defaultButton="true" graphicTextGap="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: #2780FF; -fx-background-radius: 12; -fx-font-size: 16; -fx-font-weight: 700;" text="My Learning" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="-20.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="STAR" text="" />
+               </graphic>
+               <VBox.margin>
+                  <Insets left="10.0" top="-20.0" />
+               </VBox.margin>
+            </Button>
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.08" prefHeight="8.0" prefWidth="170.0" stylesheets="@../../../css/style.css">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Separator>
+            <HBox alignment="CENTER_LEFT" prefHeight="2.0" prefWidth="246.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="26.0" prefWidth="58.0" text="Account" textFill="#6b6c80">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+            </HBox>
+            <Button alignment="CENTER" defaultButton="true" graphicTextGap="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToSetting" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: #242635; -fx-background-radius: 12; -fx-font-family: Poppins-Medium;" text="Settings" textFill="#aeaeb1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="#aeaeb1" glyphName="GEAR" />
+               </graphic>
+               <VBox.margin>
+                  <Insets left="10.0" top="-20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="-60.0" />
+               </padding>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#goToLogin" prefHeight="39.0" prefWidth="159.0" style="-fx-background-color: #fc475f; -fx-background-radius: 12;" text="Log out" textFill="#d9dce4">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox fx:id="cardLayout" prefHeight="1077.0" prefWidth="1674.0" style="-fx-background-color: #1F1E2C;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="1674.0" style="-fx-background-color: #242635;">
+               <children>
+                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.66" prefHeight="31.0" prefWidth="288.0" style="-fx-background-color: #343645; -fx-background-radius: 10;">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/search.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="20.0" prefWidth="10.0" />
+                        <TextField alignment="TOP_LEFT" prefHeight="26.0" prefWidth="236.0" promptText="Search or type" style="-fx-background-color: #343645;" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <Label prefHeight="58.0" prefWidth="154.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="My Learning" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <HBox prefHeight="45.0" prefWidth="714.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="100.0" prefWidth="26.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="All" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" right="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="46.0" prefWidth="90.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="In Progress" textAlignment="CENTER" textFill="#6b6c80">
+                           <font>
+                              <Font name="Arial Bold" size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="46.0" prefWidth="91.0" style="-fx-font-family: Poppins;" stylesheets="@../../../css/style.css" text="Completed" textAlignment="CENTER" textFill="#6b6c80">
+                           <font>
+                              <Font name="Arial Bold" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </graphic>
+            </Label>
+            <ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="926.0" prefWidth="1446.0" style="-fx-background-color: transparent;-fx-fill: transparent;">
+               <content>
+                  <TilePane hgap="20.0" prefHeight="1742.0" prefWidth="1285.0" style="-fx-background-color: #1F1E2C;" vgap="30.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="229.0" style="-fx-background-color: #2B2C3E; -fx-background-radius: 14; -fx-fill: transparent;">
+                           <children>
+                              <ImageView cache="true" fitHeight="161.0" fitWidth="211.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../../img/course1.jpeg" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label prefHeight="24.0" prefWidth="174.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="Interectoin design With Figma" textFill="WHITE" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" left="-30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="4.0" prefWidth="223.0">
+                                 <children>
+                                    <HBox prefHeight="16.0" prefWidth="14.0">
+                                       <children>
+                                          <FontAwesomeIcon fill="#2780ff" glyphName="USER" size="1.1em">
+                                             <HBox.margin>
+                                                <Insets left="-4.0" right="4.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                       </children>
+                                    </HBox>
+                                    <Label prefHeight="18.0" prefWidth="54.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="AndroNG" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="Al-HadariBold" size="10.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="-4.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </HBox>
+                              <Region prefHeight="59.0" prefWidth="230.0" />
+                              <StackPane alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="191.0" style="-fx-background-color: #1F1E2C; -fx-background-radius: 50;">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: #2780FF; -fx-background-radius: 50;" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="229.0" style="-fx-background-color: #2B2C3E; -fx-background-radius: 14; -fx-fill: transparent;">
+                           <children>
+                              <ImageView cache="true" fitHeight="161.0" fitWidth="211.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../../img/course1.jpeg" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label prefHeight="24.0" prefWidth="174.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="Interectoin design With Figma" textFill="WHITE" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" left="-30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="4.0" prefWidth="223.0">
+                                 <children>
+                                    <HBox prefHeight="16.0" prefWidth="14.0">
+                                       <children>
+                                          <FontAwesomeIcon fill="#2780ff" glyphName="USER" size="1.1em">
+                                             <HBox.margin>
+                                                <Insets left="-4.0" right="4.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                       </children>
+                                    </HBox>
+                                    <Label prefHeight="18.0" prefWidth="54.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="AndroNG" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="Al-HadariBold" size="10.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="-4.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </HBox>
+                              <Region prefHeight="59.0" prefWidth="230.0" />
+                              <StackPane alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="191.0" style="-fx-background-color: #1F1E2C; -fx-background-radius: 50;">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: #2780FF; -fx-background-radius: 50;" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="229.0" style="-fx-background-color: #2B2C3E; -fx-background-radius: 14; -fx-fill: transparent;">
+                           <children>
+                              <ImageView cache="true" fitHeight="161.0" fitWidth="211.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../../img/course1.jpeg" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label prefHeight="24.0" prefWidth="174.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="Interectoin design With Figma" textFill="WHITE" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" left="-30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="4.0" prefWidth="223.0">
+                                 <children>
+                                    <HBox prefHeight="16.0" prefWidth="14.0">
+                                       <children>
+                                          <FontAwesomeIcon fill="#2780ff" glyphName="USER" size="1.1em">
+                                             <HBox.margin>
+                                                <Insets left="-4.0" right="4.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                       </children>
+                                    </HBox>
+                                    <Label prefHeight="18.0" prefWidth="54.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="AndroNG" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="Al-HadariBold" size="10.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="-4.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </HBox>
+                              <Region prefHeight="59.0" prefWidth="230.0" />
+                              <StackPane alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="191.0" style="-fx-background-color: #1F1E2C; -fx-background-radius: 50;">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: #2780FF; -fx-background-radius: 50;" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="229.0" style="-fx-background-color: #2B2C3E; -fx-background-radius: 14; -fx-fill: transparent;">
+                           <children>
+                              <ImageView cache="true" fitHeight="161.0" fitWidth="211.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../../img/course1.jpeg" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label prefHeight="24.0" prefWidth="174.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="Interectoin design With Figma" textFill="WHITE" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" left="-30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="4.0" prefWidth="223.0">
+                                 <children>
+                                    <HBox prefHeight="16.0" prefWidth="14.0">
+                                       <children>
+                                          <FontAwesomeIcon fill="#2780ff" glyphName="USER" size="1.1em">
+                                             <HBox.margin>
+                                                <Insets left="-4.0" right="4.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                       </children>
+                                    </HBox>
+                                    <Label prefHeight="18.0" prefWidth="54.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="AndroNG" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="Al-HadariBold" size="10.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="-4.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </HBox>
+                              <Region prefHeight="59.0" prefWidth="230.0" />
+                              <StackPane alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="191.0" style="-fx-background-color: #1F1E2C; -fx-background-radius: 50;">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: #2780FF; -fx-background-radius: 50;" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="229.0" style="-fx-background-color: #2B2C3E; -fx-background-radius: 14; -fx-fill: transparent;">
+                           <children>
+                              <ImageView cache="true" fitHeight="161.0" fitWidth="211.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../../img/course1.jpeg" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label prefHeight="24.0" prefWidth="174.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="Interectoin design With Figma" textFill="WHITE" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" left="-30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="4.0" prefWidth="223.0">
+                                 <children>
+                                    <HBox prefHeight="16.0" prefWidth="14.0">
+                                       <children>
+                                          <FontAwesomeIcon fill="#2780ff" glyphName="USER" size="1.1em">
+                                             <HBox.margin>
+                                                <Insets left="-4.0" right="4.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                       </children>
+                                    </HBox>
+                                    <Label prefHeight="18.0" prefWidth="54.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="AndroNG" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="Al-HadariBold" size="10.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="-4.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </HBox>
+                              <Region prefHeight="59.0" prefWidth="230.0" />
+                              <StackPane alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="191.0" style="-fx-background-color: #1F1E2C; -fx-background-radius: 50;">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: #2780FF; -fx-background-radius: 50;" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="229.0" style="-fx-background-color: #2B2C3E; -fx-background-radius: 14; -fx-fill: transparent;">
+                           <children>
+                              <ImageView cache="true" fitHeight="161.0" fitWidth="211.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../../img/course1.jpeg" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label prefHeight="24.0" prefWidth="174.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="Interectoin design With Figma" textFill="WHITE" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" left="-30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="4.0" prefWidth="223.0">
+                                 <children>
+                                    <HBox prefHeight="16.0" prefWidth="14.0">
+                                       <children>
+                                          <FontAwesomeIcon fill="#2780ff" glyphName="USER" size="1.1em">
+                                             <HBox.margin>
+                                                <Insets left="-4.0" right="4.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                       </children>
+                                    </HBox>
+                                    <Label prefHeight="18.0" prefWidth="54.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="AndroNG" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="Al-HadariBold" size="10.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="-4.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </HBox>
+                              <Region prefHeight="59.0" prefWidth="230.0" />
+                              <StackPane alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="191.0" style="-fx-background-color: #1F1E2C; -fx-background-radius: 50;">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: #2780FF; -fx-background-radius: 50;" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </TilePane>
+               </content>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+               </padding>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -41,12 +41,12 @@ public class LoginController implements Initializable
    }
 
    @FXML
-   private void goToHome() throws IOException
+   private void goToDashboard() throws IOException
    {
       if (LMS.isValidAccount(userName.getText(), password.getText()))
       {
          App.account = LMS.findAccount(userName.getText());
-         App.setRoot("home");
+         App.setRoot("dashboard");
          App.account.displayInfo();
       }
       else

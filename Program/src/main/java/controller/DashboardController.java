@@ -16,8 +16,7 @@ import javafx.fxml.Initializable;
  * @author A.Ashraf
  */
 public class DashboardController implements Initializable
-{
-
+{    
    /**
     * Initializes the controller class.
     */
@@ -34,14 +33,17 @@ public class DashboardController implements Initializable
    }
    
    @FXML
-   public void goToLogin() throws IOException
+   public void goToMyLearning() throws IOException
    {
-      App.setRoot("login");
+      App.setRoot("mylearning");
    }
    
    @FXML
-   public void goToHome() throws IOException
+   public void goToLogin() throws IOException
    {
-      App.setRoot("home");
+      App.account = null;
+      App.setRoot("login");
+      System.out.println("You logged out");
    }
+   
 }
