@@ -6,9 +6,16 @@ package controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.layout.TilePane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -19,7 +26,8 @@ import javafx.stage.Stage;
 public class MyLearningController implements Initializable
 {
 
-   Stage window = new Stage();
+   @FXML
+   TilePane coursesPane;
    /**
     * Initializes the controller class.
     */
@@ -46,4 +54,15 @@ public class MyLearningController implements Initializable
    {
       App.setRoot("dashboard");
    }
+   
+   @FXML 
+   void sortCourses()
+   {
+        ObservableList<Node> boxes = coursesPane.getChildren();
+        List<Node> boxesList = new ArrayList<>(boxes);
+        Collections.sort(boxesList, (v1, v2) -> Integer.valueOf(((VBox)v1).getAccessibleText()).compareTo (Integer.parseInt(((VBox)v2).getAccessibleText())));
+        coursesPane.getChildren().clear();
+        coursesPane.getChildren().addAll(boxesList);
+   }
+   
 }

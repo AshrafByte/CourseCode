@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="229.0" style="-fx-background-color: #2B2C3E; -fx-background-radius: 14; -fx-fill: transparent;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="197.0" style="-fx-background-color: #2B2C3E; -fx-background-radius: 14; -fx-fill: transparent;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView cache="true" fitHeight="161.0" fitWidth="211.0" pickOnBounds="true">
+      <ImageView cache="true" fitHeight="142.0" fitWidth="176.0" pickOnBounds="true">
          <image>
             <Image url="@../../../img/course1.jpeg" />
          </image>
@@ -27,7 +27,7 @@
       </ImageView>
       <Label prefHeight="24.0" prefWidth="174.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="Interectoin design With Figma" textFill="WHITE" wrapText="true">
          <VBox.margin>
-            <Insets bottom="6.0" left="-30.0" />
+            <Insets bottom="6.0" />
          </VBox.margin>
       </Label>
       <HBox prefHeight="4.0" prefWidth="223.0">
@@ -54,10 +54,19 @@
             <Insets left="20.0" />
          </padding>
       </HBox>
-      <Region prefHeight="59.0" prefWidth="230.0" />
-      <StackPane alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="191.0" style="-fx-background-color: #1F1E2C; -fx-background-radius: 50;">
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="146.0" style="-fx-background-color: #2780FF; -fx-background-radius: 50;">
          <children>
-            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: #2780FF; -fx-background-radius: 50;" />
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="38.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="Price : " textFill="WHITE" wrapText="true" />
+            <Label fx:id="PriceLabel" prefHeight="24.0" prefWidth="14.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="50" textFill="WHITE" wrapText="true" />
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="15.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="\$" textFill="WHITE" wrapText="true" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </VBox.margin>
+      </HBox>
+      <StackPane alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="6.0" prefWidth="177.0" style="-fx-background-color: #1F1E2C; -fx-background-radius: 50;">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="132.0" style="-fx-background-color: #2780FF; -fx-background-radius: 50;" />
          </children>
          <opaqueInsets>
             <Insets />
@@ -66,5 +75,27 @@
             <Insets bottom="10.0" />
          </VBox.margin>
       </StackPane>
+      <HBox alignment="CENTER" prefHeight="24.0" prefWidth="188.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="86.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="Completed : 75%" textFill="#aeaeb1" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Region prefHeight="24.0" prefWidth="26.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Region>
+            <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="70.0" style="-fx-font-family: Poppins-Regular; -fx-font-weight: 700;" styleClass="titleLabel" stylesheets="@../../../css/style.css" text="Weeks: 4/12" textFill="#aeaeb1" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </HBox>
    </children>
 </VBox>

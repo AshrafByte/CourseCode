@@ -1,6 +1,6 @@
 system\Account.class
 system\SystemTest.class
-controller\HomeController.class
+controller\CardController.class
 controller\DashboardController.class
 controller\LoginController.class
 module-info.class
@@ -9,6 +9,7 @@ controller\CreateAccountController.class
 system\Course.class
 system\Quiz.class
 controller\HelloController.class
+controller\MyLearningController.class
 system\LMS.class
 controller\App.class
 controller\ResultController.class
