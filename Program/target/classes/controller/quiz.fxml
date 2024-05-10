@@ -5,26 +5,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0936A7;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.myQuizController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1F1E2C;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.myQuizController">
    <children>
-      <Label fx:id="question" layoutX="49.0" layoutY="58.0" prefHeight="18.0" prefWidth="483.0" text="1-First Question ....................?" textFill="#15dbea">
+      <Label fx:id="question" alignment="TOP_CENTER" layoutX="12.0" layoutY="30.0" prefHeight="96.0" prefWidth="575.0" text="1- First Question .................. ?" textFill="#2780ff" wrapText="true">
          <font>
-            <Font size="26.0" />
+            <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <Button fx:id="opt1" layoutX="85.0" layoutY="139.0" mnemonicParsing="false" onAction="#opt1Clicked" prefHeight="47.0" prefWidth="126.0" style="-fx-background-color: #22E6E8; -fx-background-radius: 21;" text="Option 1" textFill="#131515">
-         <font>
-            <Font name="System Italic" size="24.0" />
-         </font></Button>
-      <Button fx:id="opt2" layoutX="348.0" layoutY="138.0" mnemonicParsing="false" onAction="#opt2Clicked" prefHeight="47.0" prefWidth="126.0" style="-fx-background-color: #22E6E8; -fx-background-radius: 21;" text="Option 2">
+      <Button fx:id="opt1" layoutX="89.0" layoutY="128.0" mnemonicParsing="false" onAction="#opt1Clicked" prefHeight="51.0" prefWidth="421.0" style="-fx-background-color: #2780FF; -fx-background-radius: 21;" text="Option 1" textFill="#1f1e2c" wrapText="true">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Button fx:id="opt3" layoutX="84.0" layoutY="251.0" mnemonicParsing="false" onAction="#opt3Clicked" prefHeight="47.0" prefWidth="126.0" style="-fx-background-color: #22E6E8; -fx-background-radius: 21;" text="Option 3">
+      <Button fx:id="opt2" layoutX="89.0" layoutY="190.0" mnemonicParsing="false" onAction="#opt2Clicked" prefHeight="51.0" prefWidth="422.0" style="-fx-background-color: #2780FF; -fx-background-radius: 21;" text="Option 2" textFill="#1f1e2c" wrapText="true">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Button fx:id="opt4" layoutX="348.0" layoutY="251.0" mnemonicParsing="false" onAction="#opt4Clicked" prefHeight="47.0" prefWidth="126.0" style="-fx-background-color: #22E6E8; -fx-background-radius: 21;" text="Option 4">
+      <Button fx:id="opt3" layoutX="89.0" layoutY="252.0" mnemonicParsing="false" onAction="#opt3Clicked" prefHeight="51.0" prefWidth="422.0" style="-fx-background-color: #2780FF; -fx-background-radius: 21;" text="Option 3" textFill="#1f1e2c" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="opt4" layoutX="88.0" layoutY="314.0" mnemonicParsing="false" onAction="#opt4Clicked" prefHeight="51.0" prefWidth="422.0" style="-fx-background-color: #2780FF; -fx-background-radius: 21;" text="Option 4" textFill="#1f1e2c" wrapText="true">
          <font>
             <Font size="24.0" />
          </font></Button>

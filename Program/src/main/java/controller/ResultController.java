@@ -28,9 +28,10 @@ public class ResultController implements Initializable
    public void initialize(URL url, ResourceBundle rb)
    {
       totalScore.setText("Total Score is");
-      correctText.setText("Correct Answers : " + String.valueOf(myQuizController.correct));
-      wrongText.setText("Wrong Answers : " + String.valueOf(myQuizController.wrong));
+//      correctText.setText("Correct Answers : " + String.valueOf(myQuizController.correct));
+//      wrongText.setText("Wrong Answers : " + String.valueOf(myQuizController.wrong));
       marks.setText( String.valueOf(myQuizController.correct) +"/3");
+      myQuizController.correct = 0;
       if (passOrFail())
       {
          passOrFail.setText("Congratulations you have passed");

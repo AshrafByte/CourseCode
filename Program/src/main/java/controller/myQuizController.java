@@ -53,15 +53,16 @@ public class myQuizController
 
       if (counter == 0)
       {
-         showQuestions("Question1", "C", "W", "W", "W");
+         showQuestions("1] The data structure required for Breadth First Traversal on a graph is?", "Array","Stack","Tree","Queue");
       }
       else if (counter == 1)
       {
-         showQuestions("Question2", "C", "W", "W", "W");
+         showQuestions("2] Which data structure is used for implementing recursion?" +
+                 "a) Stack\n", "Array","Stack","List","Queue");
       }
       else if (counter == 2)
       {
-         showQuestions("Question3", "C", "W", "W", "W");
+         showQuestions("3] Which data structure is based on the Last In First Out (LIFO) principle?", "Tree", "Linked List", "Stack", "Queue");
       }
       App.course = course ;
    }
@@ -107,7 +108,6 @@ public class myQuizController
    @FXML
    private void opt1Clicked(ActionEvent event) throws IOException
    {
-      checkAnswer(opt1.getText());
       if (checkAnswer(opt1.getText()))
       {
          correct += 1;
@@ -119,7 +119,7 @@ public class myQuizController
 
       if (counter == 2)
       {
-         App.setRoot("result");  // the result panel
+         App.setRoot("result");
       }
       else
       {
@@ -131,7 +131,6 @@ public class myQuizController
    @FXML
    private void opt2Clicked(ActionEvent event) throws IOException
    {
-      checkAnswer(opt2.getText());
       if (checkAnswer(opt2.getText()))
       {
          correct += 1;
@@ -143,7 +142,7 @@ public class myQuizController
 
       if (counter == 2)
       {
-         App.setRoot("result");  // the result panel
+         App.setRoot("result");
       }
       else
       {
@@ -155,7 +154,6 @@ public class myQuizController
    @FXML
    private void opt3Clicked(ActionEvent event) throws IOException
    {
-      checkAnswer(opt3.getText());
       if (checkAnswer(opt3.getText()))
       {
          correct += 1;
@@ -167,7 +165,7 @@ public class myQuizController
 
       if (counter == 2)
       {
-         App.setRoot("result");  // the result panel
+         App.setRoot("result");
       }
       else
       {
@@ -179,7 +177,6 @@ public class myQuizController
    @FXML
    private void opt4Clicked(ActionEvent event) throws IOException
    {
-      checkAnswer(opt4.getText());
       if (checkAnswer(opt4.getText()))
       {
          correct += 1;
@@ -191,7 +188,7 @@ public class myQuizController
 
       if (counter == 2)
       {
-         App.setRoot("result");  // the result panel
+         App.setRoot("result");
       }
       else
       {

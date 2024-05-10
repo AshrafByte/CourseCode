@@ -14,7 +14,7 @@
 
 <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="197.0" style="-fx-background-color: #2B2C3E; -fx-background-radius: 14; -fx-fill: transparent;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView cache="true" fitHeight="142.0" fitWidth="176.0" pickOnBounds="true">
+      <ImageView cache="true" fitHeight="142.0" fitWidth="180.0" pickOnBounds="true">
          <image>
             <Image url="@../../../img/course1.jpeg" />
          </image>

@@ -64,5 +64,4 @@ public class MyLearningController implements Initializable
         coursesPane.getChildren().clear();
         coursesPane.getChildren().addAll(boxesList);
    }
-   
 }
