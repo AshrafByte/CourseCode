@@ -14,14 +14,14 @@ public class Course
    private LocalDate publishedDate;
    private Instructor instructor;
    private ArrayList<Student> enrolledStudents;
-   private double price;
+   private int price;
    private double avgRating;
    private int numberOfRatings;
    private int estimatedHours;
    private double CourseCompletionPercentage;
    private ArrayList<Quiz> quizzes;
 
-   public Course(Instructor instructor, String title, String description, String[] content, String catagory, String difficulty, double price, int estimatedHours)
+   public Course(Instructor instructor, String title, String description, String[] content, String catagory, String difficulty, int price, int estimatedHours)
    {
       this.instructor = instructor;
       this.enrolledStudents = new ArrayList<>();
@@ -37,6 +37,12 @@ public class Course
    public Course()
    {
       quizzes = new ArrayList<>();
+   }
+   public Course(String title , Instructor instructor , int price)
+   {
+     this.title = title;
+     this.instructor = instructor;
+     this.price = price;
    }
    //Getters
    public String getTitle()
@@ -69,7 +75,7 @@ public class Course
       return publishedDate.toString();
    }
 
-   public double getPrice()
+   public int getPrice()
    {
       return price;
    }
@@ -95,7 +101,7 @@ public class Course
    }
    //Setters
 
-   public void setPrice(double price)
+   public void setPrice(int price)
    {
       this.price = price;
    }
@@ -148,4 +154,20 @@ public class Course
    {
       quizzes.add(quiz);
    }
+
+   public void setTitle(String title)
+   {
+      this.title = title;
+   }
+
+   public void setInstructor(Instructor instructor)
+   {
+      this.instructor = instructor;
+   }
+
+   public Instructor getInstructor()
+   {
+      return instructor;
+   }
+   
 }

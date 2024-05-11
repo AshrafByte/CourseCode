@@ -19,14 +19,20 @@ public abstract class Account
       this.credit = credit;
       this.age = age;
    }
-   
+
    public Account(String userName, String password, String email)
    {
       this.userName = userName;
       this.password = password;
       this.email = email;
    }
-   
+
+   public Account(String userName, String password, String email, String fullname)
+   {
+      this(userName, password, email);
+      this.fullName = fullname;
+   }
+
    public String getUserName()
    {
       return this.userName;
@@ -56,12 +62,11 @@ public abstract class Account
    {
       return age;
    }
-   
-   
+
    public void setUserName(String userName)
    {
-      this.userName = userName ;
-      
+      this.userName = userName;
+
    }
 
    public void setEmail(String email)
@@ -88,7 +93,7 @@ public abstract class Account
    {
       this.credit = credit;
    }
-   
+
    abstract public void displayInfo();
-   
+
 }

@@ -12,11 +12,14 @@ import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import system.Course;
+import system.Instructor;
 
 /**
  * FXML Controller class
@@ -34,7 +37,7 @@ public class MyLearningController implements Initializable
    @Override
    public void initialize(URL url, ResourceBundle rb)
    {
-      // TODO
+      addCard(new Course("CS50", new Instructor("AHmed2s", "1234", "dasdsd", "Ahmed Ashraf"), 40));
    }   
    
    @FXML
@@ -63,5 +66,22 @@ public class MyLearningController implements Initializable
         Collections.sort(boxesList, (v1, v2) -> Integer.valueOf(((VBox)v1).getAccessibleText()).compareTo (Integer.parseInt(((VBox)v2).getAccessibleText())));
         coursesPane.getChildren().clear();
         coursesPane.getChildren().addAll(boxesList);
+   }
+   
+   public void addCard(Course course)
+   {
+      FXMLLoader fxmlLoader = new FXMLLoader();
+      fxmlLoader.setLocation(getClass().getResource("card.fxml"));
+      try
+      {
+         VBox cardBox = fxmlLoader.load();
+         CardController cc = fxmlLoader.getController();
+         cc.setData(course);
+         coursesPane.getChildren().add(cardBox);
+      }
+      catch (IOException ex)
+      {
+         ex.printStackTrace();
+      }
    }
 }

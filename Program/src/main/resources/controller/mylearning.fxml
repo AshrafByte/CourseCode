@@ -224,7 +224,7 @@
                                             <children>
                                                 <ImageView cache="true" fitHeight="142.0" fitWidth="180.0" pickOnBounds="true">
                                                     <image>
-                                                        <Image url="@../../../img/course1.jpeg" />
+                                                        <Image url="@../img/course1.jpeg" />
                                                     </image>
                                                     <viewport>
                                                         <Rectangle2D />

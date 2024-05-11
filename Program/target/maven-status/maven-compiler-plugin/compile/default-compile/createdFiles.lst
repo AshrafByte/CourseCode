@@ -8,6 +8,7 @@ controller\myQuizController.class
 controller\CreateAccountController.class
 system\Course.class
 system\Quiz.class
+controller\TextCardController.class
 controller\HelloController.class
 controller\MyLearningController.class
 system\LMS.class
