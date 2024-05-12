@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import java.io.IOException;
+import java.util.ArrayList;
 import javafx.animation.FadeTransition;
 import static javafx.application.Application.launch;
 import javafx.scene.Node;
@@ -49,10 +50,21 @@ public class App extends Application
       page = new Scene(loadFXML("login"));
       window.setScene(page);
       window.show();
-      
-      
+      window.setOnCloseRequest(eh -> {
+         System.out.println("Our system Logs:");
+         System.out.println("\nAccounts:-");
+         displayInfo(LMS.getAccounts());
+         System.out.println("\nCourses:-");
+         displayInfo(LMS.getCourses());
+      });
    }
-
+   
+   private void displayInfo(ArrayList< ? extends displayable>objects)
+   {
+      for (var obj : objects)
+         obj.display();
+   }
+   
    private static Parent loadFXML(String fxml) throws IOException
    {
       FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));

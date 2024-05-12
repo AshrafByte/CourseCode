@@ -57,6 +57,13 @@ public class LMS implements displayable
       return null;
    }
 
+   public static ArrayList<Account> getAccounts()
+   {
+      return accounts;
+   }
+
+   
+   
    static public boolean isValidAccount(String userName, String password)
    {
       var account = findAccount(userName);

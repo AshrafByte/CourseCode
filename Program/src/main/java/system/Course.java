@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public class Course implements displayable
 {
-
+   private static int count ;
    private String title;
    private String description;
    private String[] content;
@@ -38,12 +38,14 @@ public class Course implements displayable
    }
 
    public Course()
-   {
+   {  
+      count++;
       quizzes = new ArrayList<>();
    }
 
    public Course(String title, Instructor instructor, int price)
    {
+      count++;
       this.title = title;
       this.instructor = instructor;
       this.price = price;
@@ -52,6 +54,7 @@ public class Course implements displayable
 
    public Course(Instructor instructor, String title, String description, int price, String difficulty)
    {
+      count++;
       this.title = title;
       this.instructor = instructor;
       this.price = price;
@@ -130,15 +133,9 @@ public class Course implements displayable
 
    @Override
    public void display()
-   {
-
-       
-      System.out.println("course info");
-      System.out.println("title:"+title);
-      System.out.println("description:"+description);
-      System.out.println("instructor name:"+instructor);
-      System.out.println("price:"+price);
-      System.out.println("Published date: " + getPublishedDate());
+   {  
+      String s = "Course" + count + " {" + "title=" + title + ", description=" + description + ", instructor:"+instructor.getUserName() + ", price:"+price + ", Published date: " + getPublishedDate() + "}";
+      System.out.println(s);
 
    }
 
