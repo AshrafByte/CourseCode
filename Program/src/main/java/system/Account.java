@@ -6,15 +6,18 @@ import java.util.Objects;
 public abstract class Account implements displayable
 {
 
-   protected String userName;
+   private static int count;
+   private int id;
+   private String userName;
    private String password;
    private String fullName;
    private String email;
-   double credit;
-   int age;
+   private double credit;
+   private int age;
 
    public Account(String userName, String fullName, String password, String email, double credit, int age)
    {
+      id = ++count;
       this.userName = userName;
       this.fullName = fullName;
       this.password = password;
@@ -25,6 +28,7 @@ public abstract class Account implements displayable
 
    public Account(String userName, String password, String email)
    {
+      id = ++count;
       this.userName = userName;
       this.password = password;
       this.email = email;
@@ -122,7 +126,9 @@ public abstract class Account implements displayable
    public void setCredit(double credit)
    {
       if (credit < 0)
+      {
          throw new IllegalArgumentException("Input cannot be negative.");
+      }
       try
       {
          this.credit = credit;
@@ -143,7 +149,7 @@ public abstract class Account implements displayable
    @Override
    public String toString()
    {
-      return "Account{" + "userName=" + userName + ", password=" + password + ", fullName=" + fullName + ", email="
+      return "Account" + id + " {" + "userName=" + userName + ", password=" + password + ", fullName=" + fullName + ", email="
               + email + ", credit=" + credit + ", age=" + age + '}';
    }
 
