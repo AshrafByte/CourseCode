@@ -18,6 +18,7 @@ import system.Account;
 import system.Course;
 import system.LMS;
 import system.SystemTest;
+import system.displayable;
 
 /**
  * JavaFX App
@@ -48,6 +49,8 @@ public class App extends Application
       page = new Scene(loadFXML("login"));
       window.setScene(page);
       window.show();
+      
+      
    }
 
    private static Parent loadFXML(String fxml) throws IOException
@@ -64,6 +67,8 @@ public class App extends Application
       ft1.setToValue(0);
       ft1.play();
    }
+   
+   
    public static void main(String[] args)
    {
       SystemTest.TestGUI();

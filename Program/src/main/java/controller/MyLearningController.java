@@ -26,6 +26,7 @@ import javafx.stage.Stage;
 import system.Course;
 import system.Instructor;
 import system.LMS;
+import system.PriceComparator;
 import system.Student;
 
 /**
@@ -116,7 +117,8 @@ public class MyLearningController implements Initializable
    {
       ObservableList<Node> boxes = coursesPane.getChildren();
       List<Node> boxesList = new ArrayList<>(boxes);
-      Collections.sort(boxesList, (v1, v2) -> Integer.valueOf(((VBox) v1).getAccessibleText()).compareTo(Integer.parseInt(((VBox) v2).getAccessibleText())));
+      PriceComparator sortingCondition = new PriceComparator();
+      Collections.sort(boxesList, sortingCondition );
       coursesPane.getChildren().clear();
       coursesPane.getChildren().addAll(boxesList);
    }

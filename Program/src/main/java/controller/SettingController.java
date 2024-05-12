@@ -50,7 +50,7 @@ public class SettingController implements Initializable
       password.setPromptText(account.getPassword());
       email.setPromptText(account.getEmail());
       age.setPromptText(String.valueOf(account.getAge()));
-      username.setPromptText(account.getUserName());
+      username.setText(account.getUserName());
    }
 
    @FXML

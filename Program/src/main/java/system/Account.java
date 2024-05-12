@@ -1,5 +1,6 @@
 package system;
 
+import java.util.InputMismatchException;
 import java.util.Objects;
 
 public abstract class Account implements displayable
@@ -78,7 +79,18 @@ public abstract class Account implements displayable
 
    public void setFullName(String fullName)
    {
-      this.fullName = fullName;
+      try
+      {
+
+         this.fullName = fullName;
+
+      }
+      catch (InputMismatchException e)
+      {
+
+         System.out.println("InputMismatchException");
+
+      }
    }
 
    public void setPassword(String password)
@@ -88,58 +100,90 @@ public abstract class Account implements displayable
 
    public void setAge(int age)
    {
-      this.age = age;
+      if (age < 0)
+      {
+         throw new IllegalArgumentException("Input cannot be negative.");
+      }
+      try
+      {
+
+         this.age = age;
+
+      }
+      catch (InputMismatchException e)
+      {
+
+         System.out.println("InputMismatchException");
+
+      }
+
    }
 
    public void setCredit(double credit)
    {
-      this.credit = credit;
+      if (credit < 0)
+         throw new IllegalArgumentException("Input cannot be negative.");
+      try
+      {
+         this.credit = credit;
+      }
+      catch (InputMismatchException e)
+      {
+         System.out.println("InputMismatchException");
+      }
    }
 
    @Override
-    public void displayInfo(){
-       System.out.println(this);
-       
-   };
+   public void display()
+   {
+      System.out.println(this);
 
-    @Override
-    public String toString() {
-        return "Account{" + "userName=" + userName + ", password=" + password + ", fullName=" + fullName + ", email=" 
-                + email + ", credit=" + credit + ", age=" + age + '}';
-    }
+   }
 
-    
+   @Override
+   public String toString()
+   {
+      return "Account{" + "userName=" + userName + ", password=" + password + ", fullName=" + fullName + ", email="
+              + email + ", credit=" + credit + ", age=" + age + '}';
+   }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Account other = (Account) obj;
-        if (Double.doubleToLongBits(this.credit) != Double.doubleToLongBits(other.credit)) {
-            return false;
-        }
-        if (this.age != other.age) {
-            return false;
-        }
-        if (!Objects.equals(this.userName, other.userName)) {
-            return false;
-        }
-        if (!Objects.equals(this.password, other.password)) {
-            return false;
-        }
-        if (!Objects.equals(this.fullName, other.fullName)) {
-            return false;
-        }
-        return Objects.equals(this.email, other.email);
-    }
-   
-   
+   @Override
+   public boolean equals(Object obj)
+   {
+      if (this == obj)
+      {
+         return true;
+      }
+      if (obj == null)
+      {
+         return false;
+      }
+      if (getClass() != obj.getClass())
+      {
+         return false;
+      }
+      final Account other = (Account) obj;
+      if (Double.doubleToLongBits(this.credit) != Double.doubleToLongBits(other.credit))
+      {
+         return false;
+      }
+      if (this.age != other.age)
+      {
+         return false;
+      }
+      if (!Objects.equals(this.userName, other.userName))
+      {
+         return false;
+      }
+      if (!Objects.equals(this.password, other.password))
+      {
+         return false;
+      }
+      if (!Objects.equals(this.fullName, other.fullName))
+      {
+         return false;
+      }
+      return Objects.equals(this.email, other.email);
+   }
 
 }

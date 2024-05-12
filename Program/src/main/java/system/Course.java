@@ -36,26 +36,30 @@ public class Course implements displayable
       this.estimatedHours = estimatedHours;
       this.publishedDate = LocalDate.now();
    }
+
    public Course()
    {
       quizzes = new ArrayList<>();
    }
-   public Course(String title , Instructor instructor , int price)
+
+   public Course(String title, Instructor instructor, int price)
    {
-     this.title = title;
-     this.instructor = instructor;
-     this.price = price;
+      this.title = title;
+      this.instructor = instructor;
+      this.price = price;
+      this.publishedDate = LocalDate.now();
    }
-   
-    public Course(Instructor instructor, String title, String description, int price, String difficulty)
+
+   public Course(Instructor instructor, String title, String description, int price, String difficulty)
    {
       this.title = title;
       this.instructor = instructor;
       this.price = price;
       this.description = description;
       this.difficulty = difficulty;
+      this.publishedDate = LocalDate.now();
    }
-   
+
    //Getters
    public String getTitle()
    {
@@ -125,8 +129,9 @@ public class Course implements displayable
    }
 
    @Override
-   public void displayInfo()
+   public void display()
    {
+
        
       System.out.println("course info");
       System.out.println("title:"+title);
@@ -134,7 +139,7 @@ public class Course implements displayable
       System.out.println("instructor name:"+instructor);
       System.out.println("price:"+price);
       System.out.println("Published date: " + getPublishedDate());
-      
+
    }
 
    // other
@@ -161,6 +166,7 @@ public class Course implements displayable
       numberOfRatings++;
       avgRating = (total + rating) / numberOfRatings;
    }
+
    public void addQuiz(Quiz quiz)
    {
       quizzes.add(quiz);
@@ -181,74 +187,86 @@ public class Course implements displayable
       return instructor;
    }
 
-    
+   @Override
+   public boolean equals(Object obj)
+   {
+      if (this == obj)
+      {
+         return true;
+      }
+      if (obj == null)
+      {
+         return false;
+      }
+      if (getClass() != obj.getClass())
+      {
+         return false;
+      }
+      final Course other = (Course) obj;
+      if (this.price != other.price)
+      {
+         return false;
+      }
+      if (Double.doubleToLongBits(this.avgRating) != Double.doubleToLongBits(other.avgRating))
+      {
+         return false;
+      }
+      if (this.numberOfRatings != other.numberOfRatings)
+      {
+         return false;
+      }
+      if (this.estimatedHours != other.estimatedHours)
+      {
+         return false;
+      }
+      if (Double.doubleToLongBits(this.CourseCompletionPercentage) != Double.doubleToLongBits(other.CourseCompletionPercentage))
+      {
+         return false;
+      }
+      if (!Objects.equals(this.title, other.title))
+      {
+         return false;
+      }
+      if (!Objects.equals(this.description, other.description))
+      {
+         return false;
+      }
+      if (!Objects.equals(this.catagory, other.catagory))
+      {
+         return false;
+      }
+      if (!Objects.equals(this.difficulty, other.difficulty))
+      {
+         return false;
+      }
+      if (!Arrays.deepEquals(this.content, other.content))
+      {
+         return false;
+      }
+      if (!Objects.equals(this.publishedDate, other.publishedDate))
+      {
+         return false;
+      }
+      if (!Objects.equals(this.instructor, other.instructor))
+      {
+         return false;
+      }
+      if (!Objects.equals(this.enrolledStudents, other.enrolledStudents))
+      {
+         return false;
+      }
+      return Objects.equals(this.quizzes, other.quizzes);
+   }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Course other = (Course) obj;
-        if (this.price != other.price) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.avgRating) != Double.doubleToLongBits(other.avgRating)) {
-            return false;
-        }
-        if (this.numberOfRatings != other.numberOfRatings) {
-            return false;
-        }
-        if (this.estimatedHours != other.estimatedHours) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.CourseCompletionPercentage) != Double.doubleToLongBits(other.CourseCompletionPercentage)) {
-            return false;
-        }
-        if (!Objects.equals(this.title, other.title)) {
-            return false;
-        }
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        if (!Objects.equals(this.catagory, other.catagory)) {
-            return false;
-        }
-        if (!Objects.equals(this.difficulty, other.difficulty)) {
-            return false;
-        }
-        if (!Arrays.deepEquals(this.content, other.content)) {
-            return false;
-        }
-        if (!Objects.equals(this.publishedDate, other.publishedDate)) {
-            return false;
-        }
-        if (!Objects.equals(this.instructor, other.instructor)) {
-            return false;
-        }
-        if (!Objects.equals(this.enrolledStudents, other.enrolledStudents)) {
-            return false;
-        }
-        return Objects.equals(this.quizzes, other.quizzes);
-    }
+   @Override
+   public String toString()
+   {
+      return "Course{" + "title=" + title + ", description=" + description + ", content=" + content + ", catagory="
+              + catagory + ", difficulty=" + difficulty + ", publishedDate=" + publishedDate
+              + ", instructor=" + instructor + ", enrolledStudents=" + enrolledStudents
+              + ", price=" + price + ", avgRating=" + avgRating + ", numberOfRatings=" + numberOfRatings
+              + ", estimatedHours=" + estimatedHours + ", CourseCompletionPercentage=" + CourseCompletionPercentage
+              + ", quizzes=" + quizzes + '}';
+   }
 
-    @Override
-    public String toString() {
-        return "Course{" + "title=" + title + ", description=" + description + ", content=" + content + ", catagory=" 
-                + catagory + ", difficulty=" + difficulty + ", publishedDate=" + publishedDate 
-                + ", instructor=" + instructor + ", enrolledStudents=" + enrolledStudents 
-                + ", price=" + price + ", avgRating=" + avgRating + ", numberOfRatings=" + numberOfRatings 
-                + ", estimatedHours=" + estimatedHours + ", CourseCompletionPercentage=" + CourseCompletionPercentage 
-                + ", quizzes=" + quizzes + '}';
-    }
-    
-    
-   
-   
-   
 }

@@ -35,33 +35,36 @@ public class Quiz implements displayable
       return grade;
    }
 
-   public void setQuestion(String question , int questionNum)
+   public void setQuestion(String question, int questionNum)
    {
-      questions.set(questionNum, question) ;   }
+      questions.set(questionNum, question);
+   }
 
    public String getQuestion(int questionNum)
    {
       return questions.get(questionNum);
    }
 
-   public void setOptions(String [] options , int questionNum)
+   public void setOptions(String[] options, int questionNum)
    {
-     this.options.set(questionNum, options);
+      this.options.set(questionNum, options);
    }
-   
-   public  String getOption(int questionNum , int optionNum)
+
+   public String getOption(int questionNum, int optionNum)
    {
       return options.get(questionNum)[optionNum];
    }
+
    public void addQuestion(String question)
    {
       questions.add(question);
    }
-   
-   public void addOptions (String [] option)
+
+   public void addOptions(String[] option)
    {
       options.add(option);
    }
+
    @Override
    public String toString()
    {
@@ -85,8 +88,9 @@ public class Quiz implements displayable
       return Double.compare(grade, quiz.grade) == 0;
    }
 
-    @Override
-    public void displayInfo() {
-        System.out.println(this);
-    }
+   @Override
+   public void display()
+   {
+      System.out.println(this);
+   }
 }

@@ -8,6 +8,7 @@ package system;
  *
  * @author 20109
  */
-public interface displayable {
-      void displayInfo();
+public interface displayable
+{
+   void display();
 }

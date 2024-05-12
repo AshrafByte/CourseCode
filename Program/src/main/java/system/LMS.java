@@ -44,8 +44,7 @@ public class LMS implements displayable
    {
       return courses;
    }
-   
-   
+
    static public Account findAccount(String userName)
    {
       for (Account account : accounts)
@@ -57,52 +56,52 @@ public class LMS implements displayable
       }
       return null;
    }
-   
-   static public boolean isValidAccount(String userName , String password)
+
+   static public boolean isValidAccount(String userName, String password)
    {
       var account = findAccount(userName);
-      
+
       if (account == null)
-         return false;
-      
-      if (!password.equals(account.getPassword()))
-         return false ;
-      
-      return true; 
-   }
-   
-
-
-    @Override
-    public  void displayInfo() {
-        for (Course course : LMS.courses)
       {
-         System.out.println("system.Course Title: " + course.getTitle());
-         course.displayInfo();
+         return false;
       }
-        
-       System.out.println("Instructors: ");
+
+      if (!password.equals(account.getPassword()))
+      {
+         return false;
+      }
+
+      return true;
+   }
+
+   @Override
+   public void display()
+   {
+      for (Course course : LMS.courses)
+      {
+         System.out.println("Course Title: " + course.getTitle());
+         course.display();
+      }
+
+      System.out.println("Instructors: ");
       for (Account account : LMS.accounts)
       {
          if (account instanceof Instructor)
          {
             System.out.println(account.getUserName());
-            account.displayInfo();
+            account.display();
          }
-      } 
-      
-       System.out.println("Students: ");
+      }
+
+      System.out.println("Students: ");
       for (Account account : LMS.accounts)
       {
          if (account instanceof Student)
          {
             System.out.println(account.getUserName());
-            account.displayInfo();
+            account.display();
          }
       }
-    }
+   }
 
-    
-   
-   
 }
