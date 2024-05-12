@@ -1,6 +1,8 @@
 package system;
 
-public abstract class Account
+import java.util.Objects;
+
+public abstract class Account implements displayable
 {
 
    protected String userName;
@@ -94,6 +96,50 @@ public abstract class Account
       this.credit = credit;
    }
 
-   abstract public void displayInfo();
+   @Override
+    public void displayInfo(){
+       System.out.println(this);
+       
+   };
+
+    @Override
+    public String toString() {
+        return "Account{" + "userName=" + userName + ", password=" + password + ", fullName=" + fullName + ", email=" 
+                + email + ", credit=" + credit + ", age=" + age + '}';
+    }
+
+    
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Account other = (Account) obj;
+        if (Double.doubleToLongBits(this.credit) != Double.doubleToLongBits(other.credit)) {
+            return false;
+        }
+        if (this.age != other.age) {
+            return false;
+        }
+        if (!Objects.equals(this.userName, other.userName)) {
+            return false;
+        }
+        if (!Objects.equals(this.password, other.password)) {
+            return false;
+        }
+        if (!Objects.equals(this.fullName, other.fullName)) {
+            return false;
+        }
+        return Objects.equals(this.email, other.email);
+    }
+   
+   
 
 }

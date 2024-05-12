@@ -18,15 +18,15 @@ public class Student extends Account
       super(userName, password, email, fullname);
    }
 
-   @Override
-   public void displayInfo()
-   {
-      System.out.println(getUserName());
-      System.out.println(getPassword());
-   }
+   
 
    public void enrollCourse()
    {
 
    }
+
+    
+
+    
+   
 }

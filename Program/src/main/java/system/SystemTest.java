@@ -20,12 +20,13 @@ public class SystemTest
       }
 
       // test displaying students and instructors accounts on the LMS.
-      LMS.displayAllStudents();
-      LMS.displayAllInstructors();
+      LMS lms=new LMS();
+      lms.displayInfo();
+      lms.displayInfo();
 
       // test deleting account from the LMS.
-      LMS.deleteAccount(newAccounts[0]);
-      LMS.displayAllStudents();
+      lms.deleteAccount(newAccounts[0]);
+      lms.displayInfo();
    }
    
    public static void TestGUI()

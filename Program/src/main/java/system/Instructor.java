@@ -18,12 +18,7 @@ public class Instructor extends Account
       super(userName, password, email, fullname);
    }
 
-   @Override
-   public void displayInfo()
-   {
-      System.out.println(getUserName());
-      System.out.println(getPassword());
-   }
+   
 
    // this method should create course then add the course to the system.
    // use course class constrcutor
@@ -31,4 +26,8 @@ public class Instructor extends Account
    {
       LMS.addCourse(new Course(this,title ,description ,price , difficulty));
    }
+
+    
+   
+   
 }

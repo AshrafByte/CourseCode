@@ -3,7 +3,7 @@ package system;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Quiz
+public class Quiz implements displayable
 {
 
    private double grade;
@@ -84,4 +84,9 @@ public class Quiz
       Quiz quiz = (Quiz) o;
       return Double.compare(grade, quiz.grade) == 0;
    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println(this);
+    }
 }

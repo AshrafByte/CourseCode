@@ -2,8 +2,10 @@ package system;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
 
-public class Course
+public class Course implements displayable
 {
 
    private String title;
@@ -122,18 +124,13 @@ public class Course
       System.out.println("system.Course Instructors:" + instructor); // to_string method will be invoked.
    }
 
+   @Override
    public void displayInfo()
    {
-      System.out.println("system.Course Info");
-      System.out.println("Title: " + title);
-      System.out.println("Description: " + description);
-      System.out.println("Difficulty: " + difficulty);
-      System.out.println("Catagory: " + catagory);
-      System.out.println("Number of ratings: " + numberOfRatings);
+       System.out.println(this);
       System.out.println("Number of enrolled students: " + getNumberOfStudents());
       System.out.println("Published date: " + getPublishedDate());
-      System.out.println("Average rating: " + avgRating);
-      System.out.println("Price: " + price);
+      
    }
 
    // other
@@ -179,5 +176,75 @@ public class Course
    {
       return instructor;
    }
+
+    
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Course other = (Course) obj;
+        if (this.price != other.price) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.avgRating) != Double.doubleToLongBits(other.avgRating)) {
+            return false;
+        }
+        if (this.numberOfRatings != other.numberOfRatings) {
+            return false;
+        }
+        if (this.estimatedHours != other.estimatedHours) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.CourseCompletionPercentage) != Double.doubleToLongBits(other.CourseCompletionPercentage)) {
+            return false;
+        }
+        if (!Objects.equals(this.title, other.title)) {
+            return false;
+        }
+        if (!Objects.equals(this.description, other.description)) {
+            return false;
+        }
+        if (!Objects.equals(this.catagory, other.catagory)) {
+            return false;
+        }
+        if (!Objects.equals(this.difficulty, other.difficulty)) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.content, other.content)) {
+            return false;
+        }
+        if (!Objects.equals(this.publishedDate, other.publishedDate)) {
+            return false;
+        }
+        if (!Objects.equals(this.instructor, other.instructor)) {
+            return false;
+        }
+        if (!Objects.equals(this.enrolledStudents, other.enrolledStudents)) {
+            return false;
+        }
+        return Objects.equals(this.quizzes, other.quizzes);
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" + "title=" + title + ", description=" + description + ", content=" + content + ", catagory=" 
+                + catagory + ", difficulty=" + difficulty + ", publishedDate=" + publishedDate 
+                + ", instructor=" + instructor + ", enrolledStudents=" + enrolledStudents 
+                + ", price=" + price + ", avgRating=" + avgRating + ", numberOfRatings=" + numberOfRatings 
+                + ", estimatedHours=" + estimatedHours + ", CourseCompletionPercentage=" + CourseCompletionPercentage 
+                + ", quizzes=" + quizzes + '}';
+    }
+    
+    
+   
+   
    
 }

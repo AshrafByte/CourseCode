@@ -2,7 +2,7 @@ package system;
 
 import java.util.ArrayList;
 
-public class LMS
+public class LMS implements displayable
 {
 
    static private final ArrayList<Course> courses = new ArrayList<>();
@@ -71,35 +71,38 @@ public class LMS
       return true; 
    }
    
-   static public void displayAllCourses()
-   {
-      for (Course course : LMS.courses)
+
+
+    @Override
+    public  void displayInfo() {
+        for (Course course : LMS.courses)
       {
          System.out.println("system.Course Title: " + course.getTitle());
+         course.displayInfo();
       }
-   }
-
-   static public void displayAllInstructors()
-   {
-      System.out.println("Instructors: ");
+        
+       System.out.println("Instructors: ");
       for (Account account : LMS.accounts)
       {
          if (account instanceof Instructor)
          {
             System.out.println(account.getUserName());
+            account.displayInfo();
          }
-      }
-   }
-
-   static public void displayAllStudents()
-   {
-      System.out.println("Students: ");
+      } 
+      
+       System.out.println("Students: ");
       for (Account account : LMS.accounts)
       {
          if (account instanceof Student)
          {
             System.out.println(account.getUserName());
+            account.displayInfo();
          }
       }
-   }
+    }
+
+    
+   
+   
 }
