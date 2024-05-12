@@ -70,6 +70,11 @@ public abstract class Account implements displayable
       return age;
    }
 
+   public int getId()
+   {
+      return id;
+   }
+     
    public void setUserName(String userName)
    {
       this.userName = userName;
@@ -149,8 +154,8 @@ public abstract class Account implements displayable
    @Override
    public String toString()
    {
-      return "Account" + id + " {" + "userName=" + userName + ", password=" + password + ", fullName=" + fullName + ", email="
-              + email + ", credit=" + credit + ", age=" + age + '}';
+      return "userName=" + userName + ", password=" + password + ", fullName=" + fullName + ", email="
+              + email + ", credit=" + credit + ", age=" + age ;
    }
 
    @Override
