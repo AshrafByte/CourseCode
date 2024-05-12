@@ -44,6 +44,16 @@ public class Course
      this.instructor = instructor;
      this.price = price;
    }
+   
+    public Course(Instructor instructor, String title, String description, int price, String difficulty)
+   {
+      this.title = title;
+      this.instructor = instructor;
+      this.price = price;
+      this.description = description;
+      this.difficulty = difficulty;
+   }
+   
    //Getters
    public String getTitle()
    {

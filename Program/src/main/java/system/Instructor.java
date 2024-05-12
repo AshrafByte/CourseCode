@@ -27,8 +27,8 @@ public class Instructor extends Account
 
    // this method should create course then add the course to the system.
    // use course class constrcutor
-   public void createCourse(String title, String description, String[] content, String catagory, String difficulty, double price, int estimatedHours)
+   public void createCourse(String title, String description, String difficulty, int price)
    {
-
+      LMS.addCourse(new Course(this,title ,description ,price , difficulty));
    }
 }

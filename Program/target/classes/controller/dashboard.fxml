@@ -71,7 +71,7 @@
                               <Insets left="6.0" />
                            </VBox.margin>
                         </ImageView>
-                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="194.0" style="-fx-background-color: #262836; -fx-background-radius: 12;">
+                        <AnchorPane fx:id="quizPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="194.0" style="-fx-background-color: #262836; -fx-background-radius: 12;">
                            <VBox.margin>
                               <Insets left="6.0" top="5.0" />
                            </VBox.margin>

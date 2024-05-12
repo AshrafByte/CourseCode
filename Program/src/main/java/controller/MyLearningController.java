@@ -15,11 +15,18 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import system.Course;
 import system.Instructor;
+import system.LMS;
+import system.Student;
 
 /**
  * FXML Controller class
@@ -30,44 +37,90 @@ public class MyLearningController implements Initializable
 {
 
    @FXML
-   TilePane coursesPane;
+   private TextField CourseDes;
+
+   @FXML
+   private TextField CoursePrice;
+
+   @FXML
+   private Label PriceLabel3;
+
+   @FXML
+   private Button addCourseB;
+
+   @FXML
+   private VBox cardLayout;
+
+   @FXML
+   private TextField courseTitle;
+
+   @FXML
+   private TilePane coursesPane;
+
+   @FXML
+   private ToggleGroup diffcuilty;
+
+   @FXML
+   private ToggleGroup diffcuilty1;
+
+   @FXML
+   private ToggleGroup diffcuilty2;
+
+   @FXML
+   private ScrollPane scrollPaneLayout;
+
+   @FXML
+   private VBox addCourseBox;
+
+   @FXML
+   private Button createB;
+
    /**
     * Initializes the controller class.
     */
    @Override
    public void initialize(URL url, ResourceBundle rb)
    {
-      addCard(new Course("CS50", new Instructor("AHmed2s", "1234", "dasdsd", "Ahmed Ashraf"), 40));
-   }   
-   
+      scrollPaneLayout.setVisible(true);
+      addCourseBox.setVisible(false);
+      if (App.account instanceof Instructor)
+      {
+         addCourseB.setVisible(true);
+      }
+      for (var course : LMS.getCourses())
+      {
+         addCard(course);
+      }
+   }
+
    @FXML
    public void goToSetting() throws IOException
    {
       App.setRoot("setting");
    }
-   
+
    @FXML
    public void goToLogin() throws IOException
    {
       App.setRoot("login");
    }
-   
+
    @FXML
    public void goToDashboard() throws IOException
    {
       App.setRoot("dashboard");
    }
-   
-   @FXML 
+
+   @FXML
    private void sortCourses()
    {
-        ObservableList<Node> boxes = coursesPane.getChildren();
-        List<Node> boxesList = new ArrayList<>(boxes);
-        Collections.sort(boxesList, (v1, v2) -> Integer.valueOf(((VBox)v1).getAccessibleText()).compareTo (Integer.parseInt(((VBox)v2).getAccessibleText())));
-        coursesPane.getChildren().clear();
-        coursesPane.getChildren().addAll(boxesList);
+      ObservableList<Node> boxes = coursesPane.getChildren();
+      List<Node> boxesList = new ArrayList<>(boxes);
+      Collections.sort(boxesList, (v1, v2) -> Integer.valueOf(((VBox) v1).getAccessibleText()).compareTo(Integer.parseInt(((VBox) v2).getAccessibleText())));
+      coursesPane.getChildren().clear();
+      coursesPane.getChildren().addAll(boxesList);
    }
-   
+
    public void addCard(Course course)
    {
       FXMLLoader fxmlLoader = new FXMLLoader();
@@ -83,5 +136,26 @@ public class MyLearningController implements Initializable
       {
          ex.printStackTrace();
       }
+   }
+
+   @FXML
+   void AddCourse()
+   {
+      scrollPaneLayout.setVisible(false);
+      addCourseBox.setVisible(true);
+   }
+
+   @FXML
+   void courseDiffculity()
+   {
+
+   }
+
+   @FXML
+   void createCourseAction() throws IOException
+   {
+      Instructor currentInstructor = (Instructor)App.account;
+      currentInstructor.createCourse(courseTitle.getText(), CourseDes.getText(), "beginner", Integer.parseInt(CoursePrice.getText()));
+      App.setRoot("mylearning");
    }
 }

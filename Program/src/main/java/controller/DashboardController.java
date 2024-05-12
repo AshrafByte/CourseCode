@@ -9,7 +9,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import system.Instructor;
 
 /**
  * FXML Controller class
@@ -18,14 +20,16 @@ import javafx.stage.Stage;
  */
 public class DashboardController implements Initializable
 {
-
+   @FXML
+   AnchorPane quizPane;
    /**
     * Initializes the controller class.
     */
    @Override
    public void initialize(URL url, ResourceBundle rb)
    {
-      // TODO
+      if (App.account instanceof Instructor)
+         quizPane.setVisible(false);
    }   
    
    @FXML

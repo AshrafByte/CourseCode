@@ -40,6 +40,12 @@ public class LMS
       return null;
    }
 
+   public static ArrayList<Course> getCourses()
+   {
+      return courses;
+   }
+   
+   
    static public Account findAccount(String userName)
    {
       for (Account account : accounts)
