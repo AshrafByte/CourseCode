@@ -75,8 +75,8 @@ public class MyLearningController implements Initializable
       try
       {
          VBox cardBox = fxmlLoader.load();
-         CardController cc = fxmlLoader.getController();
-         cc.setData(course);
+         CardController cardLayout = fxmlLoader.getController();
+         cardLayout.setData(course);
          coursesPane.getChildren().add(cardBox);
       }
       catch (IOException ex)

@@ -31,24 +31,21 @@ public class CardController implements Initializable
     
     @FXML
     private ImageView courseImage;
- 
+    
+    private Course cardCourse ;
+    
    @Override
-
    public void initialize(URL url, ResourceBundle rb)
    {
       
    }
-
-   public int getPrice()
-   {
-      return Integer.valueOf(PriceLabel.getText());
-   }
+   
    public void setData (Course course)
    {
+      cardCourse = course ;
       courseTitle.setText(course.getTitle());
       PriceLabel.setText(String.valueOf(course.getPrice()));
       courseInstructor.setText(course.getInstructor().getFullName());
       card.setAccessibleText(String.valueOf(course.getPrice()));
-      
    }
 }

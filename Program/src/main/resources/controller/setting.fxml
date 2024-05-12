@@ -17,19 +17,42 @@
    <center>
       <VBox alignment="CENTER" prefHeight="917.0" prefWidth="1634.0" spacing="40.0" BorderPane.alignment="CENTER">
          <children>
-            <Label contentDisplay="CENTER" prefHeight="35.0" prefWidth="704.0" text="Profile Setting" textFill="WHITE">
+            <HBox>
                <VBox.margin>
                   <Insets />
                </VBox.margin>
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Label>
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="35.0" prefWidth="704.0" text="Profile Setting" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
             <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="89.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="76.0" text="Username" textFill="#c9cdd9">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="0.0" />
+                  <Region prefHeight="30.0" prefWidth="83.0" />
+                  <TextField fx:id="username" editable="false" prefHeight="30.0" prefWidth="281.0" style="-fx-background-color: #242635; -fx-text-fill: #fff;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="85.0" spacing="20.0">
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" text="Name" textFill="#c9cdd9">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="17.0" />
                      </font>
                   </Label>
                   <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="60.0" />
@@ -40,15 +63,12 @@
                      </font>
                   </TextField>
                </children>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
             </HBox>
             <HBox alignment="CENTER_LEFT" spacing="20.0">
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" text="Password" textFill="#c9cdd9">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="17.0" />
                      </font>
                   </Label>
                   <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="8.0" />
@@ -67,7 +87,7 @@
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" text="Age" textFill="#c9cdd9">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="17.0" />
                      </font>
                   </Label>
                   <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="93.0" />
@@ -86,7 +106,7 @@
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" text="Email" textFill="#c9cdd9">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="17.0" />
                      </font>
                   </Label>
                   <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="71.0" />

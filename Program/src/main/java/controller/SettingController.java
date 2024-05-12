@@ -24,7 +24,9 @@ import javafx.util.Duration;
 public class SettingController implements Initializable
 {
    Stage window = new Stage();
-
+   
+   @FXML
+   TextField username;
    @FXML
    TextField name;
    @FXML
@@ -35,6 +37,7 @@ public class SettingController implements Initializable
    TextField email;
    @FXML
    Label savedMesg;
+   
 
    /**
     * Initializes the controller class.
@@ -47,6 +50,7 @@ public class SettingController implements Initializable
       password.setPromptText(account.getPassword());
       email.setPromptText(account.getEmail());
       age.setPromptText(String.valueOf(account.getAge()));
+      username.setPromptText(account.getUserName());
    }
 
    @FXML
