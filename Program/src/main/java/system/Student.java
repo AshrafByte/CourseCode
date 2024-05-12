@@ -18,15 +18,9 @@ public class Student extends Account
       super(userName, password, email, fullname);
    }
 
-   
-
    public void enrollCourse()
    {
 
    }
 
-    
-
-    
-   
 }

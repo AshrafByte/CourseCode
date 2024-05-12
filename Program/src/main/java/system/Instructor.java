@@ -18,16 +18,11 @@ public class Instructor extends Account
       super(userName, password, email, fullname);
    }
 
-   
-
    // this method should create course then add the course to the system.
    // use course class constrcutor
    public void createCourse(String title, String description, String difficulty, int price)
    {
-      LMS.addCourse(new Course(this,title ,description ,price , difficulty));
+      LMS.addCourse(new Course(this, title, description, price, difficulty));
    }
 
-    
-   
-   
 }

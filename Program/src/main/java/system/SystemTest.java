@@ -2,7 +2,7 @@ package system;
 
 public class SystemTest
 {
-   
+
    public static void testLMS()
    {
       Account[] newAccounts =
@@ -20,15 +20,15 @@ public class SystemTest
       }
 
       // test displaying students and instructors accounts on the LMS.
-      LMS lms=new LMS();
-      lms.displayInfo();
-      lms.displayInfo();
+      LMS lms = new LMS();
+      lms.display();
+      lms.display();
 
       // test deleting account from the LMS.
       lms.deleteAccount(newAccounts[0]);
-      lms.displayInfo();
+      lms.display();
    }
-   
+
    public static void TestGUI()
    {
       Account[] newAccounts =
@@ -43,7 +43,7 @@ public class SystemTest
       {
          LMS.createAccount(newAccount);
       }
-      
+
       Course[] newCourses =
       {
          new Course("CS50", new Instructor("AHmed2s", "1234", "dasdsd", "Ahmed Ashraf"), 30),
@@ -52,11 +52,11 @@ public class SystemTest
          new Course("CS50", new Instructor("AHmed2s", "1234", "dasdsd", "Ahmed Ashraf"), 50),
          new Course("Data Structure", new Instructor("UC San Diego", "1234", "dasdsd", "Ahmed Ashraf"), 100)
       };
-      
+
       for (var course : newCourses)
       {
          LMS.addCourse(course);
       }
-      
+
    }
 }

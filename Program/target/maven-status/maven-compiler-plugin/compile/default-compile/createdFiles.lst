@@ -14,5 +14,7 @@ system\LMS.class
 controller\App.class
 controller\ResultController.class
 system\Student.class
+system\PriceComparator.class
 controller\SettingController.class
 system\Instructor.class
+system\displayable.class

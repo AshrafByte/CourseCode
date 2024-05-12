@@ -47,7 +47,7 @@ public class LoginController implements Initializable
       {
          App.account = LMS.findAccount(userName.getText());
          App.setRoot("dashboard");
-         App.account.displayInfo();
+         App.account.display();
       }
       else
          App.playErrorAnimation(error);

@@ -21,9 +21,11 @@ import system.Student;
 
 /**
  * FXML Controller class
-**/
+*
+ */
 public class CreateAccountController implements Initializable
 {
+
    @FXML
    TextField username;
    @FXML
@@ -33,9 +35,10 @@ public class CreateAccountController implements Initializable
    @FXML
    PasswordField confirmPassword;
    @FXML
-   Label errorL ;
+   Label errorL;
    @FXML
    RadioButton accountType;
+
    /**
     * Initializes the controller class.
     */
@@ -43,42 +46,48 @@ public class CreateAccountController implements Initializable
    public void initialize(URL url, ResourceBundle rb)
    {
       // TODO
-   }   
-   
- // exception handling
-   private boolean isValidFields()
+   }
+
+   private boolean isValidFields() throws IllegalArgumentException
    {
-      if (username.getText().equals("") || email.getText().equals("") || password.getText().equals("")  || confirmPassword.getText().equals(""))
+      if (username.getText().isEmpty() || email.getText().isEmpty() || password.getText().isEmpty() || confirmPassword.getText().isEmpty())
       {
-         errorL.setText("Please provide all data fields");
-         return false;
+         throw new IllegalArgumentException("Please provide all data fields");
       }
+
       if (LMS.findAccount(username.getText()) != null)
       {
-         errorL.setText("Username already exists");
-         return false;
+         throw new IllegalArgumentException("Username already exists");
       }
-      if (!(password.getText().equals(confirmPassword.getText())))
+
+      if (!password.getText().equals(confirmPassword.getText()))
       {
-         errorL.setText("Passwords don't match");
-         return false;
+         throw new IllegalArgumentException("Passwords don't match");
       }
+
       return true;
    }
+
    @FXML
    private void register() throws IOException
    {
-      if (isValidFields())
+      try
       {
-         if (accountType.isSelected())
-            App.account = new Instructor(username.getText(), password.getText(), email.getText());
-         else
-            App.account = new Student(username.getText(), password.getText(), email.getText());
-         LMS.createAccount(App.account);
-         App.setRoot("dashboard");
+         if (isValidFields())
+         {
+            if (accountType.isSelected())
+               App.account = new Instructor(username.getText(), password.getText(), email.getText());
+            else
+               App.account = new Student(username.getText(), password.getText(), email.getText());
+            
+            LMS.createAccount(App.account);
+            App.setRoot("dashboard");
+         }
       }
-      else
+      catch (IllegalArgumentException e)
+      {
          App.playErrorAnimation(errorL);
-         
+         errorL.setText(e.getMessage());
+      }
    }
 }
