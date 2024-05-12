@@ -1,5 +1,6 @@
 package system;
 
+import java.util.InputMismatchException;
 import java.util.Objects;
 
 public abstract class Account implements displayable
@@ -78,7 +79,15 @@ public abstract class Account implements displayable
 
    public void setFullName(String fullName)
    {
-      this.fullName = fullName;
+      try {
+          
+         this.fullName = fullName;
+
+            } catch (InputMismatchException e) {
+
+                System.out.println("InputMismatchException");
+
+            } 
    }
 
    public void setPassword(String password)
@@ -87,15 +96,36 @@ public abstract class Account implements displayable
    }
 
    public void setAge(int age)
-   {
-      this.age = age;
-   }
+   {  
+       if (age < 0){
+      throw new IllegalArgumentException("Input cannot be negative.");
+      }
+      try {
+          
+         this.age = age;
 
+            } catch (InputMismatchException e) {
+
+                System.out.println("InputMismatchException");
+
+            } 
+      
+    }
    public void setCredit(double credit)
    {
-      this.credit = credit;
-   }
+       if (age < 0){
+      throw new IllegalArgumentException("Input cannot be negative.");
+      }
+      try {
+          
+         this.credit = credit;
 
+            } catch (InputMismatchException e) {
+
+                System.out.println("InputMismatchException");
+
+            } 
+   }
    @Override
     public void displayInfo(){
        System.out.println(this);
