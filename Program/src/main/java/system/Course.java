@@ -127,8 +127,12 @@ public class Course implements displayable
    @Override
    public void displayInfo()
    {
-       System.out.println(this);
-      System.out.println("Number of enrolled students: " + getNumberOfStudents());
+       
+      System.out.println("course info");
+      System.out.println("title:"+title);
+      System.out.println("description:"+description);
+      System.out.println("instructor name:"+instructor);
+      System.out.println("price:"+price);
       System.out.println("Published date: " + getPublishedDate());
       
    }
